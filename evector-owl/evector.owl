@@ -10,16 +10,405 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/oleg/ontologies/2014/9/untitled-ontology-5"
+     xml:base="http://univ.evector"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.semanticweb.org/oleg/ontologies/2014/9/untitled-ontology-5">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+     ontologyIRI="http://univ.evector">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Amusement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Annoyance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boredom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Compassion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contempt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contentment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coordinate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Curiosity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Despair"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disappointment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disgust"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dubious"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Embarrassment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmotionVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Euphoria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Expectant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fury"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Guilt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Happiness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inspiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Irritation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jealousy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Joy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Panic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pleasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pride"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sadness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Serenity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Surprise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Terror"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Worry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEmotion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Name"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Amusement"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amusement"/>
+        <Class IRI="#Happiness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anger"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Annoyance"/>
+        <Class IRI="#Anger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boredom"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Compassion"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concern"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confusion"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contempt"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contentment"/>
+        <Class IRI="#Happiness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curiosity"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Despair"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disappointment"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disgust"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dubious"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elation"/>
+        <Class IRI="#Happiness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embarrassment"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmotionVector"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Euphoria"/>
+        <Class IRI="#Happiness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Expectant"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fear"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fury"/>
+        <Class IRI="#Anger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Grief"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Guilt"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Happiness"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hope"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inspiration"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interest"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Irritation"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jealousy"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joy"/>
+        <Class IRI="#Happiness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Panic"/>
+        <Class IRI="#Fear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pleasure"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pride"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rage"/>
+        <Class IRI="#Anger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sadness"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serenity"/>
+        <Class IRI="#Happiness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shame"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surprise"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Terror"/>
+        <Class IRI="#Fear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Worry"/>
+        <Class IRI="#Emotion"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#Vector"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#Coordinate"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Name"/>
+        <IRI>#Amusement</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Amusement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amusement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Amusement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Annoyance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Annoyance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Annoyance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Susierzinimas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Definition"/>
+        <IRI>#Emotion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Name"/>
+        <IRI>#Emotion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">anxiety</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fury</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fury</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pleasure</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Malonumas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pleasure</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Pleasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rage</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#Definition"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#Name"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </SubAnnotationPropertyOf>
 </Ontology>
 
 
