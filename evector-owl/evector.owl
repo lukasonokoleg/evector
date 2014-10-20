@@ -79,9 +79,6 @@
         <Class IRI="#Emotion"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#EmotionVector"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Euphoria"/>
     </Declaration>
     <Declaration>
@@ -151,19 +148,82 @@
         <Class IRI="#Terror"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Value"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Vector"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Worry"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCoordinates"/>
+        <ObjectProperty IRI="#has"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasEmotion"/>
+        <ObjectProperty IRI="#has_coordinate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_emotion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_weight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amusement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Annoyance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boredom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Compassion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Concern"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Confusion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Contempt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coordinate1.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coordinate1.2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coordinate1.3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Curiosity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Despair"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Disappointment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Disgust"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dubious"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fury"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vector1"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#Definition"/>
@@ -244,10 +304,6 @@
         <Class IRI="#Emotion"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#EmotionVector"/>
-        <Class IRI="#Vector"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Euphoria"/>
         <Class IRI="#Happiness"/>
     </SubClassOf>
@@ -343,14 +399,171 @@
         <Class IRI="#Worry"/>
         <Class IRI="#Emotion"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Amusement"/>
+        <NamedIndividual IRI="#Amusement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Anger"/>
+        <NamedIndividual IRI="#Anger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Annoyance"/>
+        <NamedIndividual IRI="#Annoyance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Anxiety"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Boredom"/>
+        <NamedIndividual IRI="#Boredom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Compassion"/>
+        <NamedIndividual IRI="#Compassion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Concern"/>
+        <NamedIndividual IRI="#Concern"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confusion"/>
+        <NamedIndividual IRI="#Confusion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Contempt"/>
+        <NamedIndividual IRI="#Contempt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Coordinate"/>
+        <NamedIndividual IRI="#Coordinate1.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Coordinate"/>
+        <NamedIndividual IRI="#Coordinate1.2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Coordinate"/>
+        <NamedIndividual IRI="#Coordinate1.3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Curiosity"/>
+        <NamedIndividual IRI="#Curiosity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Despair"/>
+        <NamedIndividual IRI="#Despair"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disappointment"/>
+        <NamedIndividual IRI="#Disappointment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disgust"/>
+        <NamedIndividual IRI="#Disgust"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dubious"/>
+        <NamedIndividual IRI="#Dubious"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fury"/>
+        <NamedIndividual IRI="#Fury"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rage"/>
+        <NamedIndividual IRI="#Rage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vector"/>
+        <NamedIndividual IRI="#Vector1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_emotion"/>
+        <NamedIndividual IRI="#Coordinate1.1"/>
+        <NamedIndividual IRI="#Anger"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_emotion"/>
+        <NamedIndividual IRI="#Coordinate1.2"/>
+        <NamedIndividual IRI="#Amusement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_emotion"/>
+        <NamedIndividual IRI="#Coordinate1.3"/>
+        <NamedIndividual IRI="#Concern"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_coordinate"/>
+        <NamedIndividual IRI="#Vector1"/>
+        <NamedIndividual IRI="#Coordinate1.3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_coordinate"/>
+        <NamedIndividual IRI="#Vector1"/>
+        <NamedIndividual IRI="#Coordinate1.2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_coordinate"/>
+        <NamedIndividual IRI="#Vector1"/>
+        <NamedIndividual IRI="#Coordinate1.1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_weight"/>
+        <NamedIndividual IRI="#Coordinate1.1"/>
+        <Literal datatypeIRI="&xsd;double">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_weight"/>
+        <NamedIndividual IRI="#Coordinate1.2"/>
+        <Literal datatypeIRI="&xsd;double">150.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_weight"/>
+        <NamedIndividual IRI="#Coordinate1.3"/>
+        <Literal datatypeIRI="&xsd;double">50.0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_coordinate"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_emotion"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCoordinates"/>
+        <ObjectProperty IRI="#has"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_coordinate"/>
         <Class IRI="#Vector"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_emotion"/>
+        <Class IRI="#Coordinate"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCoordinates"/>
+        <ObjectProperty IRI="#has"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_coordinate"/>
         <Class IRI="#Coordinate"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_emotion"/>
+        <Class IRI="#Emotion"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_weight"/>
+        <Class IRI="#Coordinate"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_weight"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#Name"/>
         <IRI>#Amusement</IRI>
