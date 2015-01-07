@@ -1,0 +1,377 @@
+/** 
+ * This file contains layout style properties for spark components:
+ * fonts, dimensions, paddings and margins, positions
+ *
+ * Contents:
+ *  1. ------------------------------- Input Fields --------------------------------
+ *  2. ------------------------------- Label Widgets -------------------------------
+ *  3. ---------------------------------- Buttons ----------------------------------
+ *  4. -------------------------------- File Upload --------------------------------
+ *  5. -------------------------------- Field panel --------------------------------
+ *  6. ------------------------------ Table Component ------------------------------
+ *  7. ------------------------------- Modal Widgets -------------------------------
+ *  8. ------------------------------- Message panel -------------------------------
+ *  9. --------------------------------- Calendar ----------------------------------
+ * 10. -------------------------------- Message Icon -------------------------------
+ * 11. -------------------------------- Wizard Panel -------------------------------
+ */
+
+/* (+) ------------------------------- Input Fields -------------------------------- */
+input[type="text"], 
+input[type="password"]  {
+	padding-right: 5px;
+	text-indent: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+	line-height: 18px;
+}
+
+textarea {
+	text-indent: 0px;
+	padding: 3px 5px 0px 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.gwt-ListBox, 
+.spark-ListField,
+.spark-SuggestField, 
+.spark-DateField,
+.spark-DateFullTimeField, 
+.spark-DateShortTimeField, 
+.spark-DateHoursField,
+.spark-Field-textBox {
+	height: 26px;
+}
+
+.spark-TextAreaField {
+	min-height: 60px;
+	height: 131px;
+}
+
+.spark-SuggestField,
+.spark-DateField-textBox.spark-Field-textBox {
+    height: 20px;
+}
+
+.spark-DateField, 
+.spark-DateFullTimeField, 
+.spark-DateShortTimeField, 
+.spark-DateHoursField {
+	padding-right: 25px;
+}
+
+.spark-RadioField {
+	padding: 10px;
+}
+
+input[type="text"].spark-SuggestField-input {
+    border: 0;
+}
+
+.spark-DropdownListBox.spark-Field-textBox {
+	height: 26px;
+	width: 100%;
+}
+
+.spark-Field-displayOnly {
+    padding-left: 2px;
+}
+/* (-) ------------------------------- Input Fields -------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+.spark-Field-label {
+    line-height: 20px;
+    padding-right: 9px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.spark-Field-label-left,
+.spark-Field-label.left {
+    text-align: left;
+    display: inline;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.spark-CheckBoxField label,
+.gwt-CheckBox label {
+	margin-left: 3px;
+}
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) ---------------------------------- Buttons ---------------------------------- */
+.spark-Button,
+button.gwt-Button{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 0px 10px;
+    margin-right: 5px;
+    height: 27px;
+}
+/* (-) ---------------------------------- Buttons ---------------------------------- */
+/* (+) -------------------------------- File Upload -------------------------------- */
+.spark-FileUpload-itemNameText {
+	line-height: 16px;
+}
+/* (-) -------------------------------- File Upload -------------------------------- */
+/* (+) -------------------------------- Field panel -------------------------------- */
+.spark-FieldWrapper,
+.spark-FieldPanel .spark-Field,
+.spark-FieldPanel .gwt-Button,
+.spark-FieldPanel .spark-Field-label {
+	font-size: 12px;
+	margin-right: 6px;
+}
+
+.spark-FieldWrapper{
+	margin-bottom: 6px;
+}
+
+.spark-FieldPanel .gwt-Button,
+.spark-FieldPanel .spark-Field {
+	height: 24px;
+}
+
+.spark-FieldPanel .spark-TextAreaField,
+.spark-FieldPanel .spark-Field-label {
+	line-height: 24px;
+}
+/* (-) -------------------------------- Field panel -------------------------------- */
+/* (+) ------------------------------ Table Component ------------------------------ */
+.spark-TableComponent {
+	width: 100%;
+}
+
+table.spark-TableComponent,
+table.spark-TableComponent table {
+	border-collapse: collapse;
+	border-spacing: 0px !important;
+}
+
+td.spark-TableComponent-columnHeader {
+    padding: 0px 7px 0px 7px;
+}
+
+td.spark-TableComponent-queryInput {
+    padding: 0px 10px 10px 10px !important;
+}
+
+.spark-TableComponent-queryInput input[type="text"] {
+    margin-left: -3px;
+    vertical-align: bottom;
+}
+
+.spark-TableComponent-queryInput input.placeholder, 
+.spark-TableComponent-queryInput .spark-dateField-background {
+    font-size: 11px;
+}
+
+.spark-TableComponent-button-search {
+    padding: 0px;
+	display: block;
+}
+
+.spark-TableComponent td {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.spark-TableComponent td.spark-TableComponent-cell {
+    padding: 3px 10px;
+    /* white-space: nowrap; */
+}
+
+.spark-TableComponent-rowExpandedCell .gwt-HTML {
+    padding: 0px 8px 2px 6px;
+}
+
+.spark-TableComponent .buttonExpand,
+.spark-TableComponent .buttonExpand:HOVER{
+	width: 22px;
+}
+
+.spark-DataTableHeader-button,
+.spark-DataTableHeader-button-asc,
+.spark-DataTableHeader-button-desc {
+    height: 16px;
+}
+
+.spark-DataTableHeader-button {
+    background-position: -14px 0px;
+}
+
+.spark-DataTableHeader-button-asc {
+    background-position: -7px 0px;
+}
+
+.spark-DataTableHeader-button-desc {
+    background-position: 0px 0px;
+}
+
+.spark-DataTableHeader-label {
+    font-family: "Trebuchet MS", Arial, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 0px;
+}
+
+.spark-ListboxPagingComponent {
+	margin-right: 10px;
+}
+
+table.spark-ListboxPagingComponent {
+	float: center;
+	margin: auto;
+	width: auto !important;
+}
+
+table.spark-ListboxPagingComponent table td {
+	padding: 0px;
+}
+
+table.spark-ListboxPagingComponent .gwt-ListBox {
+	min-width: 65px;
+}
+
+.spark-ListboxPagingComponent div.spark-TableCommand-current,
+.spark-ListboxPagingComponent a.spark-TableCommand {
+	margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+.spark-ListboxPagingComponent select.gwt-ListBox {
+	font-size: 9pt !important;
+}
+
+.spark-TableComponent-cell>input.spark-TextField-textBox {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/* (-) ------------------------------ Table Component ------------------------------ */
+/* (+) ------------------------------- Modal Widgets ------------------------------- */
+.dateBoxPopup,
+.spark-InfoPopup,
+.spark-SuggestBoxPopup,
+.spark-DropdownButtonPopup,
+.spark-ConfirmationDialog {
+    z-index: 2;
+}
+
+.gwt-DialogBox .dialogContent {
+	padding: 0px 30px;
+}
+
+.gwt-DialogBox .dialogContent td {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.gwt-DialogBox .Caption .gwt-HTML {
+	font-size: 14px;
+}
+
+.gwt-DialogBox .Caption .spark-Anchor{
+	padding-left: 20px;
+}
+
+.gwt-DialogBox .spark-InfoButton {
+    margin-top: 3px;
+}
+
+.spark-SuggestBoxPopup {
+    font-size: 12px;
+    font-family: Arial Unicode MS, Arial, sans-serif;
+    font-style: normal;
+}
+
+.spark-SuggestBoxPopup table td {
+	padding: 0px;
+}
+
+.spark-SuggestBoxPopup .item {
+    width: 100%;
+    padding: 2px 5px;
+}
+
+.spark-SuggestBoxPopup .suggestPopupContent div {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.spark-SuggestBoxPopup .suggestPopupContent div {
+    overflow-x: hidden;
+}
+
+.spark-SuggestBoxPopup .suggestPopupContent div div {
+    overflow: hidden;
+}
+
+.spark-SuggestBoxPopup .suggestPopupContent div table {
+    min-width: 250px;
+    border-spacing: 0;
+}
+.spark-SuggestBoxPopup .footer {
+    width: 100%;
+}
+
+.spark-SuggestBoxPopup .footer td {
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.ie8 .spark-SuggestBoxPopup .suggestPopupContent div div div {
+    overflow-y: visible;
+    overflow-x: scroll;
+}
+
+.ie8 .suggestPopupMiddleCenter {
+    vertical-align: top;
+}
+
+.spark-ConfirmationDialog {
+	max-width: 700px;
+	min-width: 330px;
+}
+
+.spark-ConfirmationDialog>tbody>tr>td>.gwt-HTML {
+	padding: 0px 40px;
+}
+
+.spark-InfoPopup {
+	padding: 3px;
+}
+.spark-InfoPopup .dialogContent td {
+	padding: 5px;
+}
+/* (-) ------------------------------- Modal Widgets ------------------------------- */
+/* (+) ------------------------------- Message panel ------------------------------- */
+.spark-MessagePanel table td {
+	padding: 2px;
+}
+/* (-) ------------------------------- Message panel ------------------------------- */
+/* (+) --------------------------------- Calendar ---------------------------------- */
+/* (-) --------------------------------- Calendar ---------------------------------- */
+/* (+) -------------------------------- Message Icon ------------------------------- */ 
+.spark-MessageIcon-counter {
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+	vertical-align: middle;
+	margin-left: 3px;
+}
+.spark-MessageIcon-counter:before {
+	content: "(";
+}
+.spark-MessageIcon-counter:after {
+	content: ")";
+}
+/* (-) -------------------------------- Message Icon ------------------------------- */
+/* (+) -------------------------------- Wizard Panel ------------------------------- */ 
+/* (-) -------------------------------- Wizard Panel ------------------------------- */  

@@ -1,0 +1,1 @@
+CREATE SCHEMA `evector` DEFAULT CHARACTER SET utf8 COLLATE utf8_lithuanian_ci;

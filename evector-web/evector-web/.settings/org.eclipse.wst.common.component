@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="evector-web">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <wb-resource deploy-path="/" source-path="/war" tag="defaultRootSource"/>
+        <dependent-module archiveName="spark-application-model.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spark-application-model/spark-application-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-gwt-application.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spark-gwt-application/spark-gwt-application">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-log4j-ext.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spark-log4j-ext.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-gwt.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spark-gwt.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-context-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-logging-3.1.0.CR2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/jboss-logging-3.1.0.CR2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-log4j12-1.7.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/slf4j-log4j12-1.7.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bind-kernel.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/bind-kernel.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tomcat-juli-7.0.16.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/tomcat-juli-7.0.16.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="validation-api-1.0.0.GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/validation-api-1.0.0.GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gwt-user.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/gwt-user.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="aopalliance.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/aopalliance.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aop-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-aop-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gwt-codeserver-2.6.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/gwt-codeserver-2.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxrpc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/jaxrpc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gwt-dev.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/gwt-dev.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-gwt-fileupload.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spark-gwt-fileupload.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-3.8-20120326.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/poi-3.8-20120326.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-ext-1.7.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/slf4j-ext-1.7.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-gwt-fileupload.src.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spark-gwt-fileupload.src.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.cobogw.gwt-1.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/org.cobogw.gwt-1.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bind-plsql.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/bind-plsql.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-fileupload-1.3.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/commons-fileupload-1.3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-beans-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-beans-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-expression-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gwt-servlet.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/gwt-servlet.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mail-1.4.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/mail-1.4.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-instrument-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-instrument-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-discovery.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/commons-discovery.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javassist.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/javassist.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.7.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/slf4j-api-1.7.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gwt-visualization.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/gwt-visualization.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="validation-api-1.0.0.GA-sources.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/validation-api-1.0.0.GA-sources.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vvsis-i18n.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/vvsis-i18n.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aspects-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-aspects-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-jdbc-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-jdbc-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/commons-lang-2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-tx-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysql-connector-java-5.1.31-bin.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/mysql-connector-java-5.1.31-bin.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-gwt.src.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spark-gwt.src.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/commons-io.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-ooxml-schemas-3.8-20120326.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/poi-ooxml-schemas-3.8-20120326.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-core-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-core-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="axis.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/axis.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-test-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-test-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/log4j-1.2.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons.logging-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/commons.logging-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-codec.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/commons-codec.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="poi-ooxml-3.8-20120326.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/poi-ooxml-3.8-20120326.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-web-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-validator-4.3.1.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/hibernate-validator-4.3.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-validator-annotation-processor-4.3.1.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/hibernate-validator-annotation-processor-4.3.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-support-4.0.6.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/spring-context-support-4.0.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="joda-time-2.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-evector-with-mysql/lib/joda-time-2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tika-app-1.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-tika/tika-app-1.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tika-parsers-1.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-tika/tika-parsers-1.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsoup-1.7.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-tika/jsoup-1.7.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsoup-1.7.3-javadoc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-tika/jsoup-1.7.3-javadoc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsoup-1.7.3-sources.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-tika/jsoup-1.7.3-sources.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="evector-grams.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/evector-grams/evector-grams">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jna.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-hunspell/jna.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spark-facebook.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spark-facebook/spark-facebook">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="facebook4j-core-2.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/evector-build/lib-facebook/facebook4j-core-2.2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="evector-web"/>
+        <property name="java-output-path" value="/evector-web/war/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

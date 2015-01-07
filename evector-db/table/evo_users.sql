@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS `evector`.`evo_users` (
+    `usr_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `usr_user_name` VARCHAR(255)CHARACTER SET UTF8 COLLATE UTF8_LITHUANIAN_CI NOT NULL,
+    `usr_first_name` VARCHAR(500)CHARACTER SET UTF8 COLLATE UTF8_LITHUANIAN_CI NULL DEFAULT NULL,
+    `usr_last_name` VARCHAR(500)CHARACTER SET UTF8 COLLATE UTF8_LITHUANIAN_CI NULL DEFAULT NULL,
+    `usr_email` VARCHAR(254) NOT NULL,
+    `usr_status` VARCHAR(45) NOT NULL,
+    PRIMARY KEY (`usr_id`),
+    UNIQUE INDEX `usr_user_name_uqx` (`usr_user_name` ASC),
+    UNIQUE INDEX `usr_email_uqx` (`usr_email` ASC)
+)  ENGINE=INNODB DEFAULT CHARACTER SET=UTF8 COLLATE = UTF8_LITHUANIAN_CI COMMENT='Table storing evector application users.'

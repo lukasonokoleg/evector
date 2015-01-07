@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.UserRegistrationService
+path: 7BF3A73A94B893A70B840D974C2B982E.gwt.rpc

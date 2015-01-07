@@ -1,0 +1,4 @@
+<h2>Paraiškos ir prašymai</h2>
+<p></p>
+<div>Curabitur hendrerit nunc at massa scelerisque hendrerit. In at pharetra orci. Sed laoreet eleifend nibh eget adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus sit amet dignissim odio. Maecenas at massa justo. Etiam tortor nulla, lacinia quis adipiscing sit amet, pretium vel dui. Mauris eget porta ante. Donec malesuada odio libero, vitae commodo enim commodo sed. In vel mi eget magna luctus semper.</div>
+<p><a href="e-government-mock.html">Teikti paraišką / prašymą</a></p>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='vvsis'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.activity.Activity' />
+	<inherits name='lt.jmsys.spark.gwt.SparkGwt' />
+	<!-- <inherits name='org.gwt.advanced.Grid' /> -->
+	<inherits name="com.google.gwt.user.Debug"/> 
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<!-- Other module inherits -->
+	<inherits name="lt.jmsys.spark.gwt.fileupload.Spark_gwt_fileupload" />
+
+	<inherits name="lt.jmsys.spark.gwt.logging.Logging" />
+	<inherits name="lt.jmsys.spark.gwt.application.common.Common" />
+
+	<replace-with class="lt.jmsys.spark.gwt.application.client.application.AlcsApplication">
+		<when-type-is class="lt.jmsys.spark.gwt.client.ui.application.Application" />
+	</replace-with>
+
+	<replace-with
+		class="lt.jmsys.spark.gwt.application.client.common.error.resource.ErrorMessageDataProvider">
+		<when-type-is class="lt.jmsys.spark.gwt.application.common.client.CommonMessageDataProvider" />
+	</replace-with>
+	
+	<replace-with
+		class="lt.jmsys.spark.gwt.application.client.common.dialog.FileUploaderConfirmator">
+		<when-type-is class="lt.jmsys.spark.gwt.fileupload.client.presenter.Confirmator" />
+	</replace-with>
+	
+	<generate-with
+		class="lt.jmsys.spark.gwt.application.common.server.service.CommonServiceGenerator">
+		<when-type-assignable class="com.google.gwt.user.client.rpc.RemoteService" />
+	</generate-with>
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='lt.jmsys.spark.gwt.application.client.BaseEntryPoint' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<super-source path="external-src" />
+
+</module>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/spark-application-model"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/spark-gwt-application"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/evector-grams"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/axis.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/bind-kernel.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/bind-plsql.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/commons-codec.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/commons-discovery.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/commons-fileupload-1.3.1.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/commons-io.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/gwt-codeserver-2.6.1.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/gwt-dev.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/gwt-user.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/gwt-visualization.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/hibernate-validator-4.3.1.Final.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/hibernate-validator-annotation-processor-4.3.1.Final.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/jboss-logging-3.1.0.CR2.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/mysql-connector-java-5.1.31-bin.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/org.cobogw.gwt-1.2.2.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/poi-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/poi-ooxml-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/poi-ooxml-schemas-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/slf4j-ext-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spark-gwt-fileupload.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spark-gwt-fileupload.src.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spark-gwt.jar" sourcepath="/evector-build/lib-evector-with-mysql/lib/spark-gwt.src.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spark-gwt.src.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spark-log4j-ext.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-aop-4.0.6.RELEASE.jar" sourcepath="C:/iDrugs/MavenRepository/org/springframework/spring-aop/4.0.6.RELEASE/spring-aop-4.0.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-aspects-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-beans-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-context-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-context-support-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-core-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-expression-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-instrument-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-jdbc-4.0.6.RELEASE.jar" sourcepath="C:/iDrugs/MavenRepository/org/springframework/spring-jdbc/4.0.6.RELEASE/spring-jdbc-4.0.6.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-test-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-tx-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/spring-web-4.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/tomcat-juli-7.0.16.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/vvsis-i18n.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-evector-with-mysql/lib/joda-time-2.4.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-tika/tika-app-1.5.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-tika/tika-parsers-1.5.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-tika/jsoup-1.7.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-tika/jsoup-1.7.3-sources.jar"/>
+	<classpathentry kind="lib" path="/evector-build/lib-tika/jsoup-1.7.3.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/spark-facebook"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

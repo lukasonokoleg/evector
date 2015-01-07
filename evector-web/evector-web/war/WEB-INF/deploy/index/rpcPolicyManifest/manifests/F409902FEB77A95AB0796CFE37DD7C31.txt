@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.LoginService
+path: 12C16F2A03262C2F3C673996A9E89663.gwt.rpc

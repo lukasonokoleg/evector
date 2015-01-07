@@ -1,0 +1,2 @@
+serviceClass: lt.jmsys.spark.gwt.logging.client.RemoteLogService
+path: 566FDFFFB5F9FBE47363DF099D97CDFD.gwt.rpc

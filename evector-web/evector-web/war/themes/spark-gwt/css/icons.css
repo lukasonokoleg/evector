@@ -1,0 +1,72 @@
+/** 
+ * This file contains style properties for custom spark icons and icon sets. 
+ * All style properties for specific icons must be placed in spark CSS files ("theme.css", "layout.css").
+ */
+ 
+@font-face {
+	font-family: 'spark-icons';
+	src: url('../fonts/spark-icons.eot?vj27w7');
+	src: url('../fonts/spark-icons.eot?#iefixvj27w7') format('embedded-opentype'),
+		 url('../fonts/spark-icons.woff?vj27w7') format('woff'),
+		 url('../fonts/spark-icons.ttf?vj27w7') format('truetype'),
+		 url('../fonts/spark-icons.svg?vj27w7#spark-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/** custom icons from spark-icon font **/
+[class^="spark-Icon-2-"]:before, [class*=" spark-Icon-2-"]:before {
+	font-family: 'spark-icons';
+}
+.spark-Icon-2-FillInfo:before {
+	content: "\22";
+}
+.spark-Icon-2-Map:before {
+	content: "\23";
+}
+.spark-Icon-2-Post:before {
+	content: "\24";
+}
+.spark-Icon-2-PostAlt:before {
+	content: "\25";
+}
+.spark-Icon-2-Collapse:before {
+	content: "\26";
+}
+.spark-Icon-2-Expand:before {
+	content: "\27";
+}
+.spark-Icon-2-Info:before {
+	content: "\28";
+}
+.spark-Icon-2-Info2:before {
+	content: "\29";
+}
+.spark-Icon-2-Step1:before {
+	content: "\2a";
+}
+.spark-Icon-2-Step2:before {
+	content: "\2b";
+}
+.spark-Icon-2-Step3:before {
+	content: "\2c";
+}
+
+/** image icons **/
+[class^="spark-Icon-Image-"], [class*=" spark-Icon-Image-"] {
+	width: 16px;
+	height: 16px;
+	vertical-align: top;
+}
+.spark-Icon-Image-Copy {
+	background: url('../img/icon_copy.png') no-repeat center;
+}
+.spark-Icon-Image-Doc {
+	background: url('../img/icon_doc.png') no-repeat center;
+}
+.spark-Icon-Image-Pdf {
+	background: url('../img/icon_pdf.png') no-repeat center;
+}
+.spark-Icon-Image-Xls {
+	background: url('../img/icon_xls.png') no-repeat center;
+}

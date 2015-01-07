@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.BookService
+path: 9B6E16666AC4A8D29BFD45AFECBDF0A3.gwt.rpc

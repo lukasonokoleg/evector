@@ -1,0 +1,19 @@
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="removeTrigger()" />
+<PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="restoreTrigger()" />
+<SCRIPT LANGUAGE="JScript">
+
+original_onbeforeunload = null;
+function removeTrigger()
+{
+    if(event.srcElement.getAttribute('href') === 'javascript:;'){
+        original_onbeforeunload = window.onbeforeunload;
+        window.onbeforeunload = null;
+    }
+}
+function restoreTrigger()
+{
+    if(event.srcElement.getAttribute('href') === 'javascript:;'){
+        window.onbeforeunload = original_onbeforeunload;
+    }
+}
+</SCRIPT>

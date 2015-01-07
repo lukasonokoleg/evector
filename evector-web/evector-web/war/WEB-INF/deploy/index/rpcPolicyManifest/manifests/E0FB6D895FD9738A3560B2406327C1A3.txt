@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.MessageService
+path: A98C7C08688B4150C6B39701A4DA8759.gwt.rpc

@@ -1,0 +1,88 @@
+.message {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding-left: 10px;
+	position: relative;
+	font-size: 10px;
+	width: 100%;
+	text-align: justify;
+	word-wrap: break-word;
+	border: 1px solid;
+	margin-bottom: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.messageSent {
+	background: #CCD9FF;
+	border-color: #BCC9EF;
+}
+
+.messageReceived {
+	background: #FFCCCC;
+	border-color: #EFBCBC;
+}
+
+.message .arrowTop {
+	display: block;
+	z-index: 100;
+	height: 0;
+	width: 0px;
+	position: absolute;
+	bottom: -10px;
+}
+
+.message .arrowTopLeft {
+	border-top: 10px solid #CCD9FF;
+	border-left: 0px solid transparent;
+	border-right: 10px solid transparent;
+	left: 15px;
+}
+
+.message .arrowTopRight {
+	border-top: 10px solid #FFCCCC;
+	border-left: 10px solid transparent;
+	border-right: 0px solid transparent;
+	right: 15px;
+}
+
+.message .arrowBottom {
+	display: block;
+	z-index: 99;
+	border-top: 11px solid;
+	height: 0;
+	width: 2px;
+	position: absolute;
+	bottom: -11px;
+}
+
+.messageSent .arrowBottom{
+	border-color: #BCC9EF;
+}
+
+.messageReceived .arrowBottom{
+	border-color: #EFBCBC;
+}
+
+.message .arrowBottomLeft {
+	border-left: 0px solid transparent;
+	border-right: 11px solid transparent;
+	left: 14px;
+}
+
+.message .arrowBottomRight {
+	border-left: 11px solid transparent;
+	border-right: 0px solid transparent;
+	right: 13px;
+}
+
+.addresseeAndDate {
+	border: none;
+	font-style: italic;
+}
+
+.messageText {
+	
+}

@@ -1,0 +1,309 @@
+/** 
+ * This file contains theme style properties for VVSIS components:
+ * colors, backgrounds, icons (sizes dependent to background images also goes here)
+ *
+ * Contents:
+ *  1. ------------------------------- Page Content --------------------------------
+ *  2. ------------------------------- Input Fields --------------------------------
+ *  3. ------------------------------- Label Widgets -------------------------------
+ *  4. ---------------------------------- Buttons ----------------------------------
+ *  5. ----------------------------------- Menu ------------------------------------ 
+ *  6. --------------------------------- Tab Bars ----------------------------------
+ *  7. ------------------------------- Modal Widgets -------------------------------
+ *  8. ------------------------------- Printing Rules ------------------------------
+ */
+
+/* (+) ------------------------------- Page Content -------------------------------- */
+
+body {
+	color: #3c4a59;
+    /* background-color: #bfcad3; */
+    background-color: #E0E8EE;
+	font-weight: 500;
+}
+
+ul { 
+	list-style: none;
+}
+
+table {
+	background-color: transparent;
+}
+
+fieldset {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    border: none;
+}
+
+fieldset legend {
+	color: #545b66;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+h1,h2,h3 {
+    color: #0066a4;
+    font-weight: normal;
+}
+
+a, a:visited {
+	color: #0065BF;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #0065BF;
+	text-decoration: underline;
+}
+
+:focus {
+	outline: #00a9ed auto 5px;
+}
+
+.header {
+	/* background: url(../img/bg.header.gif) repeat-x scroll left bottom transparent; */
+}
+
+#vvPortalLogo .loginVvPortalLogo {
+    background-image: url("../img/logo.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 335px;
+}
+
+.pageContainer {
+	border: 1px solid #bfcad3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #f8fafc;
+	background: -moz-linear-gradient(top, #f8fafc 83%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(83%,#f8fafc), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #f8fafc 83%,#ffffff 100%);
+	background: -o-linear-gradient(top, #f8fafc 83%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #f8fafc 83%,#ffffff 100%);
+	background: linear-gradient(to bottom, #f8fafc 83%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8fafc', endColorstr='#ffffff',GradientType=0 );
+}
+
+.pageFooter {
+    color: #808080;
+    /* background: url(../img/bg.footer.gif) repeat-x scroll left top transparent; */
+}
+
+.pageFooter .copyright{
+    color: #333333;
+}
+
+.pageFooter .version-number {
+	color: #a0a0a0;
+}
+
+::-webkit-input-placeholder {
+	color: #cccccc;
+}
+
+::-moz-placeholder {
+	color: #cccccc;
+}
+
+::-ms-input-placeholder {
+	color: #cccccc;
+}
+input::-moz-placeholder {
+	color: #cccccc;
+}
+
+.red {
+	color: #F70000;
+}
+
+.hint {
+	color: #666666;
+}
+
+/* (-) ------------------------------- Page Content -------------------------------- */
+/* (+) ------------------------------- Input Fields -------------------------------- */
+input[disabled], select[disabled] {
+    color: #444444;
+}
+option {
+    font-style: normal !important;
+    color: #444444 !important;
+}
+.queryField input.spark-Field-textBox {
+	-webkit-border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	border-radius: 0px 3px 3px 0px;
+}
+.queryField .spark-Anchor {
+	border: 1px solid #b6b6b6;
+	border-right: none;
+	background-color: #f1f1f1;
+	-webkit-border-radius: 3px 0px 0px 3px;
+	-moz-border-radius: 3px 0px 0px 3px;
+	border-radius: 3px 0px 0px 3px;
+}
+.queryField-focused {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+
+.queryField-focused .spark-Anchor,
+.queryField-focused .spark-Field-textBox {
+	border-color: #00c8fd;
+    outline: 0;
+}
+
+.queryField-focused .spark-Field-textBox {
+	border-left-color: #b6b6b6;
+}
+
+/* (-) ------------------------------- Input Fields -------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) ---------------------------------- Buttons ---------------------------------- */
+.disabled, .disabled:hover, .disabled:visited {
+	text-decoration: none;
+	color: #e0e0e0;
+	cursor: default;
+}
+/* (-) ---------------------------------- Buttons ---------------------------------- */
+/* (+) ----------------------------------- Menu ------------------------------------ */
+.spark-MenuLevel1 {
+    /* border: 1px solid #00B5E6; */
+    -webkit-border-radius: 0px 0px 6px 6px;
+	-moz-border-radius: 0px 0px 6px 6px;
+	border-radius: 0px 0px 6px 6px;
+	/* background: #eef2f5; */
+	/* text-shadow: none; */
+	background: #00a9ed; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00a9ed 0%, #00a0db 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00a9ed), color-stop(100%,#00a0db)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00a9ed 0%,#00a0db 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ed', endColorstr='#00a0db',GradientType=0 ); /* IE6-9 */
+	text-shadow: 0 -1px 8px rgba(0, 0, 0, 0.25);
+}
+.spark-MenuLevel1 .spark-MenuItem:first-child {
+	-webkit-border-radius: 0px 0px 0px 6px;
+	-moz-border-radius: 0px 0px 0px 6px;
+	border-radius: 0px 0px 0px 6px;
+}
+.spark-MenuLevel1 .spark-MenuItem {
+    cursor: pointer;
+	border-right: 1px solid #ffffff;
+    font-weight: 500;
+	color: #ffffff;
+} 
+.spark-MenuLevel1 .spark-MenuItem:hover,
+.spark-MenuLevel1 .spark-MenuItem.selected {
+	background: #00c8fd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00c8fd 0%, #00bff4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00c8fd), color-stop(100%,#00bff4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00c8fd 0%,#00bff4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c8fd', endColorstr='#00bff4',GradientType=0 ); /* IE6-9 */
+}
+/* (-) ----------------------------------- Menu ------------------------------------ */
+/* (+) --------------------------------- Tab Bars ---------------------------------- */
+.gwt-TabPanelBottom {
+	border: 1px solid #e3e9ec;
+	background-color: #eef2f5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.gwt-DecoratedTabBar .tabMiddleCenter :focus {
+	outline-width: 0;
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabTopCenter,
+.gwt-DecoratedTabBar .tabTopLeft,
+.gwt-DecoratedTabBar .tabTopRight,
+.gwt-DecoratedTabBar .tabTopCenter {
+	background: none !important;
+}
+.gwt-DecoratedTabBar .tabMiddleCenter {
+	font-weight: 500;
+	border: 1px solid #00B5E6;
+	color: #ffffff;
+	text-shadow: 0 -1px 8px rgba(0, 0, 0, 0.25);
+	background: #00c8fd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00c8fd 0%, #00bff4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00c8fd), color-stop(100%,#00bff4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00c8fd 0%,#00bff4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c8fd', endColorstr='#00bff4',GradientType=0 ); /* IE6-9 */
+}
+.gwt-DecoratedTabBar .tabMiddleCenter:hover {
+	background: #00a9ed; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00a9ed 0%, #00a0db 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00a9ed), color-stop(100%,#00a0db)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00a9ed 0%,#00a0db 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ed', endColorstr='#00a0db',GradientType=0 ); /* IE6-9 */
+}
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter,
+.gwt-DecoratedTabBar .gwt-TabBarItem-selected .tabMiddleCenter:hover {
+	background: #eef2f5;
+	border: 1px solid #e3e9ec;
+	border-bottom: transparent;
+	color: #3c4a59;
+	text-shadow: none;
+}
+
+/* (-) --------------------------------- Tab Bars ---------------------------------- */
+/* (+) ------------------------------ Table Component ------------------------------ */
+.tableComponent-cellError {
+	white-space: normal;
+	color: red;
+}
+/* (-) ------------------------------ Table Component ------------------------------ */
+/* (+) ------------------------------- Modal Widgets ------------------------------- */
+.gwt-DialogBox {
+    border: none;
+    -moz-box-shadow: 4px 4px 20px 4px #5e5e5e;
+    -webkit-box-shadow: 4px 4px 20px 4px #5e5e5e;
+    box-shadow: 4px 4px 20px 4px #5e5e5e;
+}
+
+.gwt-DialogBox,
+.gwt-DialogBox .dialogMiddleCenter {
+	background-color: #eef2f5 !important;
+}
+
+.gwt-DialogBox .dialogTop td {
+    color: #0065BF !important;
+}
+
+.gwt-DialogBox .Caption {
+    border: none;
+    border-bottom: none;
+    background: none;
+    color: #0066a4;
+    text-transform: uppercase;
+}
+
+.feedbackPopup {
+	opacity: 0.9;
+}
+
+.feedbackPopup .gwt-Label {
+	background-color: #fdf7af;
+	border: 1px solid #fdf7af;
+}
+/* (-) ------------------------------- Modal Widgets ------------------------------- */
+/* (+) ------------------------------- Printing Rules ------------------------------ */
+/* (-) ------------------------------- Printing Rules ------------------------------ */

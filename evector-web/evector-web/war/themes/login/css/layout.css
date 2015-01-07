@@ -1,0 +1,115 @@
+/** 
+ * This file contains LOGIN layout style properties for VVSIS components:
+ * fonts, dimensions, paddings and margins, positions
+ *
+ * Contents:
+ *  1. ------------------------------- Page Content --------------------------------
+ *  2. ------------------------------- Label Widgets -------------------------------
+ *  3. --------------------------------- Tab Bars ----------------------------------
+ */
+
+/* (+) ------------------------------- Page Content -------------------------------- */
+
+.pageContentContainerTopBg {
+    /* position: relative; */
+    min-height: 100%;
+    height: auto;
+    display: block;
+}
+
+.loginBlock {
+	display: block;
+}
+
+.loginView {
+    display: block;
+	float: left;
+	position: static;
+	vertical-align: top;
+	min-height: 140px;
+	padding-top: 40px;
+	padding-left: 15px;
+	min-width: 340px;
+}
+
+.loginView .gwt-HTML {
+	text-align: justify;
+}
+
+.spark-LoginView {
+	width: 270px;
+	float: center;
+	margin: 20px auto;
+}
+
+.loginFooter {
+	padding: 20px 25px;
+}
+
+.loginFooter .gwt-HTML {
+	display: block;
+	padding-bottom: 10px;
+}
+
+.imageBlock {
+	display: block;
+	max-width: 550px;
+	width: 100%;
+}
+
+.imageBlock .homeLink {
+	margin-top: 40px;
+	display: block;
+}
+
+.textBlock {
+	display: block;
+	vertical-align: top;
+	min-height: 140px;
+	padding-top: 10px;
+	max-width: 550px;
+}
+
+.loginText {
+	padding: 10px;
+}
+
+.loginText>* {
+	padding: 0px 10px;
+	text-align: justify;
+}
+
+.loginText>p>a {
+	display: inline-block;
+	margin: 7px 0;
+}
+
+.loginText>br {
+	margin: 7px 0;
+}
+
+.loginText>h2 {
+	padding-bottom: 10px;
+}
+
+/* (-) ------------------------------- Page Content -------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+span.spark-CheckBoxField label{
+	display: inline;
+}
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) --------------------------------- Tab Bars ---------------------------------- */
+.loginView .loginTabs {
+	width: 330px;
+}
+
+.loginView .loginTabs .gwt-DecoratedTabBar {
+	display: none;
+}
+
+table.loginTabs .gwt-TabPanelBottom {
+	max-height: 280px;
+	min-height: 232px;
+	padding: 25px 25px 0px 25px;
+}
+/* (-) --------------------------------- Tab Bars ---------------------------------- */

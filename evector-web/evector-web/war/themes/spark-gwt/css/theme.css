@@ -1,0 +1,527 @@
+/** 
+ * This file contains theme style properties for spark components:
+ * colors, backgrounds, icons (sizes dependent to background images also goes here)
+ *
+ * Contents:
+ *  1. ------------------------------- Input Fields --------------------------------
+ *  2. ------------------------------- Label Widgets -------------------------------
+ *  3. ---------------------------------- Buttons ----------------------------------
+ *  4. -------------------------------- File Upload --------------------------------
+ *  5. -------------------------------- Field panel --------------------------------
+ *  6. ------------------------------ Table Component ------------------------------
+ *  7. ------------------------------- Modal Widgets -------------------------------
+ *  8. ------------------------------- Message panel -------------------------------
+ *  9. --------------------------------- Calendar ----------------------------------
+ * 10. -------------------------------- Message Icon -------------------------------
+ * 11. -------------------------------- Wizard Panel -------------------------------
+ */
+
+/* (+) ------------------------------- Input Fields -------------------------------- */
+input[type="text"], 
+input[type="password"], 
+textarea {
+	background: none no-repeat 0px 0px;
+}
+
+input[type="text"], 
+input[type="password"], 
+select,
+textarea {
+	background-color: #ffffff;
+    color: #444444;
+    border: 1px solid #b6b6b6;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear .2s, box-shadow linear .2s;
+	-moz-transition: border linear .2s, box-shadow linear .2s;
+	-o-transition: border linear .2s, box-shadow linear .2s;
+	transition: border linear .2s, box-shadow linear .2s;
+}
+
+.spark-SuggestField, 
+.spark-DateField,
+.spark-DateFullTimeField, 
+.spark-DateShortTimeField, 
+.spark-DateHoursField {
+	background: none no-repeat 0px 0px;
+}
+
+.gwt-ListBox,
+.spark-ListField,
+.spark-SuggestField, 
+.spark-DateField,
+.spark-DateFullTimeField, 
+.spark-DateShortTimeField, 
+.spark-DateHoursField {
+	background-color: #ffffff;
+	color: #444444;
+	border: 1px solid #b6b6b6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear .2s, box-shadow linear .2s;
+	-moz-transition: border linear .2s, box-shadow linear .2s;
+	-o-transition: border linear .2s, box-shadow linear .2s;
+	transition: border linear .2s, box-shadow linear .2s;
+}
+
+.spark-RadioField {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.spark-SuggestField-input,
+.spark-Field-textBox {
+    background: #ffffff none no-repeat 0px 0px;
+    color: #444444;
+}
+
+.spark-ListField-focused, 
+.spark-ListField:focus,
+.spark-TextAreaField-focused,
+.spark-DateField-focused,
+.spark-SuggestField-focused,
+.spark-Field-textBox.focused {
+    border-color: #00c8fd !important;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+
+.spark-Field-invalid,
+.spark-SuggestField-invalid,
+.spark-SuggestField-input.invalid,
+.spark-Field-textBox.invalid {
+    text-decoration: underline;
+    background: #ffcccc none !important;
+    color: #888888 !important;
+}
+
+.spark-ListField.focused {
+	background-color: #ffffff !important; 
+}
+
+.spark-ListField[disabled],
+.spark-DateField-readonly,
+.spark-DateShortTimeField-readonly,
+.spark-DateFullTimeField-readonly,
+.spark-DateHoursField-readonly,
+.spark-SuggestField-readonly,
+.spark-SuggestField-input.readonly,
+.spark-Field-textBox.readonly {
+    background-color: #f4f4f4 !important;
+}
+
+.spark-dateField-textBox-background {
+    color: #cccccc;
+}
+/* (-) ------------------------------- Input Fields -------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+.spark-Field-label {
+    color: #6e6e6e;
+    text-transform: none;
+    font-weight: normal;
+    text-emphasis-style: circle;
+    text-emphasis-position: right;
+}
+
+.spark-Field-label-required {
+    background: url('../img/required.png') no-repeat top right;
+}
+
+.spark-Field-label-required.readonly{
+	background-image: none;
+}
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) ---------------------------------- Buttons ---------------------------------- */
+.spark-Button,
+button.gwt-Button{
+    color: #ffffff;
+    text-shadow: 0 -1px 8px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    border: 1px solid #00B5E6;
+    -webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+  	background: #00c8fd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00c8fd 0%, #00bff4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00c8fd), color-stop(100%,#00bff4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00c8fd 0%,#00bff4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00c8fd 0%,#00bff4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c8fd', endColorstr='#00bff4',GradientType=0 ); /* IE6-9 */
+}
+.spark-Button:hover,
+.spark-Button:focus,
+button.gwt-Button:hover,
+button.gwt-Button:focus{
+	border: 1px solid #00B5E6;
+	text-decoration: none;
+	background: #00a9ed; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00a9ed 0%, #00a0db 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00a9ed), color-stop(100%,#00a0db)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00a9ed 0%,#00a0db 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00a9ed 0%,#00a0db 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a9ed', endColorstr='#00a0db',GradientType=0 ); /* IE6-9 */
+}
+.spark-Button[disabled],
+.spark-Button[disabled]:active,
+.spark-Button[disabled]:hover,
+button.gwt-Button[disabled],
+button.gwt-Button[disabled]:active,
+button.gwt-Button[disabled]:hover{
+	background: #dddddd;
+    text-shadow: none;
+    color: #666666;
+    border: 1px solid #c0c0c0;
+}
+
+.spark-Button .spark-Icon {
+	color: #ffffff !important;
+}
+
+.spark-Button[disabled] .spark-Icon {
+	color: #666666 !important;
+}
+
+/** anchor **/
+.spark-Anchor {
+	color: #0065BF;
+	text-decoration: none;
+}
+.spark-Anchor:hover {
+	color: #0065BF;
+	text-decoration: underline;
+}
+
+/** colors **/
+.spark-Icon-light {
+	color: #C6D2E7;
+}
+.spark-Button:hover .spark-Icon-light,
+.spark-Anchor:hover .spark-Icon-light,
+.spark-Icon-light:hover {
+	color: #f0f0f0;
+}
+.spark-Icon-negative {
+	color: #f00000;/*red*/
+}
+.spark-Button:hover .spark-Icon-negative,
+.spark-Anchor:hover .spark-Icon-negative,
+.spark-Icon-negative:hover {
+	color: #c40000;/*darker red*/
+}
+.spark-Icon-positive {
+	color: #00BE26;/*green*/
+}
+.spark-Button:hover .spark-Icon-positive,
+.spark-Anchor:hover .spark-Icon-positive,
+.spark-Icon-positive:hover {
+	color: #03A724;/*darker green*/
+}
+.spark-Icon-filled {
+	color: #FA8F1B;/*orange*/
+}
+.spark-Button:hover .spark-Icon-filled,
+.spark-Anchor:hover .spark-Icon-filled,
+.spark-Icon-filled:hover {
+	color: #EB810D;/*darker orange*/
+}
+/* (-) ---------------------------------- Buttons ---------------------------------- */
+/* (+) -------------------------------- File Upload -------------------------------- */
+.spark-FileUpload {
+    border: none !important;
+}
+/* (-) -------------------------------- File Upload -------------------------------- */
+/* (+) -------------------------------- Field panel -------------------------------- */
+/* (-) -------------------------------- Field panel -------------------------------- */
+/* (+) ------------------------------ Table Component ------------------------------ */
+.spark-TableComponent {
+    background: none;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+td.spark-TableComponent-columnHeader {
+    background: none;
+    background: #0054a8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0054a8 0%, #0065bf 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0054a8), color-stop(100%,#0065bf)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0054a8 0%,#0065bf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0054a8 0%,#0065bf 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0054a8 0%,#0065bf 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0054a8 0%,#0065bf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0054a8', endColorstr='#0065bf',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #447BC0 !important;
+}
+
+td.spark-TableComponent-queryInput {
+    border-bottom: 1px solid #0E395E;
+    background-color: #0065BF;
+    border-right: 1px solid #0E395E !important;
+}
+
+.spark-TableComponent-queryInput input[type="text"] {
+    border: 1px solid #0E395E;
+}
+
+.spark-TableComponent-queryInput {
+    border-bottom: 2px solid #828282;
+}
+
+.spark-TableComponent-button-search {
+    background-image: url('../img/browse_search.png');
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 22px;
+    opacity: 0.6;
+    filter: alpha('opacity = 60');
+    cursor: pointer;
+}
+
+.spark-TableComponent-button-search:hover {
+    opacity: 1;
+    filter: alpha('opacity = 100');
+}
+
+.spark-TableComponent-row, 
+.spark-TableComponent-rowEven, 
+.spark-TableComponent-rowOdd {
+    background-color: #ffffff;
+}
+
+.spark-TableComponent-row>td:first-child {
+	border-left: 1px solid #e8e8e8;
+}
+
+td.spark-TableComponent-cell-lastRowCell,
+.spark-TableComponent-row:last-child>td {
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.spark-TableComponent-row>td.spark-TableComponent-rowExpandedCell,
+.spark-TableComponent-row>td.spark-TableComponent-cell {
+    border-right: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+
+.spark-TableComponent-rowHighlighted>td.spark-TableComponent-cell,
+.spark-TableComponent-rowHighlighted>td.spark-TableComponent-rowExpandedCell {
+    background-color: #F6F9FC;
+}
+
+.spark-TableComponent-rowSelected>td.spark-TableComponent-rowExpandedCell>table,
+.spark-TableComponent-rowSelected>td.spark-TableComponent-rowExpandedCell,
+.spark-TableComponent-rowSelected>td.spark-TableComponent-cell {
+    background-color: #D3F3FF;
+}
+
+.spark-TableComponent-rowSelected + .spark-TableComponent-row td.spark-TableComponent-cell {
+    border-top-color: #60C1EE;
+}
+
+.spark-TableComponent-rowSelected>td.spark-TableComponent-cell {
+    border-top-color: #60C1EE;
+    border-bottom-color: #60C1EE;
+}
+
+.spark-TableComponent-rowSelected>td:first-child {
+    border-left: 1px solid #60C1EE;
+}
+
+.spark-TableComponent-rowSelected>td:last-child {
+    border-right-color: #60C1EE;
+}
+
+.spark-TableComponent-rowSelected>td.spark-TableComponent-rowExpandedCell {
+    border-bottom-color: #60C1EE;
+}
+
+td.spark-TableComponent-rowExpandedCell {
+	background-color: #ffffff;
+}
+
+td.spark-TableComponent-rowExpandedCell>table {
+    border: 1px solid #ffffff;
+}
+
+.spark-TableComponent-rowHighlighted>td.spark-TableComponent-rowExpandedCell>table {
+	border: 1px solid #f6f6fc;
+}
+
+.spark-TableComponent .buttonExpand,
+.spark-TableComponent .buttonExpand:HOVER{
+	background: none !important;
+}
+
+.spark-DataTableHeader-button,
+.spark-DataTableHeader-button-asc,
+.spark-DataTableHeader-button-desc {
+    /* has depending height setting in layout.css */ 
+    background: url('../img/browse_arrows.png')  no-repeat;
+}
+
+.spark-DataTableHeader-label {
+    background: none;
+    font-family: "Trebuchet MS", Arial, Verdana, sans-serif;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.spark-ListboxPagingComponent a.spark-TableCommand:hover {
+    background-color: #0E395E;
+    color: #ffffff;
+}
+
+.spark-ListboxPagingComponent select.gwt-ListBox {
+	background-color: #f9fbfb;
+	border: 1px solid #b8b8b8;
+}
+
+/** Sort icons **/
+.spark-DataTableHeader:hover .spark-Icon-positive {
+	color: #00BE26 !important;/*green*/
+}
+.spark-DataTableHeader .spark-Icon {
+	opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+.spark-DataTableHeader:hover .spark-Icon {
+	opacity: 1;
+    filter: alpha(opacity=100);
+}
+.spark-DataTableHeader .spark-Anchor,
+.spark-DataTableHeader-label {
+	color: #ffffff;
+}
+
+/** Summary **/
+.summaryCell {
+	font-weight: bold;
+}
+
+.summaryRow {
+	
+}
+
+/* (-) ------------------------------ Table Component ------------------------------ */
+/* (+) ------------------------------- Modal Widgets ------------------------------- */
+.spark-ModalWidget {
+    opacity: 0;
+    cursor: progress;
+}
+
+.spark-SuggestBoxPopup{
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    border: 1px solid #999999;
+    background-color: #ffffff;
+}
+
+.gwt-SuggestBoxPopup .item-selected,
+.spark-SuggestBoxPopup .item-selected,
+.spark-DropdownButtonItem:HOVER {
+    background-color: #d1ddf6;
+}
+
+.spark-SuggestBoxPopup .footer {
+    border-top: 1px #a0a0a0 solid;
+}
+
+.spark-InfoPopup {
+    background-color: #3374AC;
+    box-shadow: 5px 5px 10px 0 #a0a0a0;
+    color: #fff;
+}
+
+.spark-InfoPopup .infoPopup-hint {
+	color: #c9c6d2;
+}
+
+.spark-InfoPopup a,
+.spark-InfoPopup .spark-Icon {
+	color: #f0f0f0;
+	text-decoration: underline;
+}
+
+.spark-InfoPopup a:HOVER,
+.spark-InfoPopup a:HOVER .spark-Icon,
+.spark-InfoPopup .spark-Icon:HOVER {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* (-) ------------------------------- Modal Widgets ------------------------------- */
+/* (+) ------------------------------- Message panel ------------------------------- */
+.spark-msg-panel-footer {
+	background-color: none;
+}
+/* (-) ------------------------------- Message panel ------------------------------- */
+/* (+) --------------------------------- Calendar ---------------------------------- */
+.advanced-Calendar .week-day-cell {
+    background-color: #515b66;
+    color: gainsboro;
+}
+
+.advanced-Calendar .week-number-cell {
+    background-color: #0065BF;
+    color: gainsboro;
+}
+
+.advanced-Calendar .selected-day-cell {
+    background-color: #C0F5FF !important;
+    outline: 1px inset #C0F5FF !important;
+}
+
+.advanced-Calendar .day-cell:hover,
+.advanced-Calendar .disabled-day-cell:hover {
+    background: none repeat scroll 0 0 #A3D7FF;
+}
+
+.advanced-Calendar .today-cell {
+    outline: 1px dashed #0065BF !important;
+}
+
+.advanced-Calendar .chooseTime-button {
+	border: none;
+	background-color: #0065BF;
+	color: #fff;
+}
+
+.advanced-Calendar .chooseTime-button:HOVER {
+    border: none;
+    background-color: #0065a3;
+}
+/* (-) --------------------------------- Calendar ---------------------------------- */
+/* (+) -------------------------------- Message Icon ------------------------------- */ 
+.spark-MessageIcon .spark-MessageIcon-counter {
+	border: none;
+	background: none;
+	box-shadow: none;
+	color: #666666;
+	opacity: 1;
+	filter: alpha('opacity = 100');
+}
+.spark-MessageIcon:hover .spark-MessageIcon-counter {
+	color: #333333;
+}
+/* (-) -------------------------------- Message Icon ------------------------------- */ 
+/* (+) -------------------------------- Wizard Panel ------------------------------- */ 
+.spark-WizardPanel .gwt-TabBar .gwt-TabBarItem {
+	color: #6e6e6e;
+}
+.spark-WizardPanel .gwt-TabBar .gwt-TabBarItem-selected {
+	color: #000000;
+	border-bottom: 1px solid #000000;
+}
+/* (-) -------------------------------- Wizard Panel ------------------------------- */ 

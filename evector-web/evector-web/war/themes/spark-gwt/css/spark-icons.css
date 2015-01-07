@@ -1,0 +1,987 @@
+/** 
+ * This file contains style properties for spark icons and default icon set. 
+ * Glyphicons font is used as default icons set. All other custom icons and sets are in CSS file - icons.css.
+ * All style properties for specific icons must be placed in spark CSS files ("theme.css", "layout.css").
+ */
+ 
+@font-face {
+	font-family: 'Glyphicons Regular';
+	src: url('../fonts/glyphicons-regular.eot');
+	src: url('../fonts/glyphicons-regular.eot?#iefix')
+		format('embedded-opentype'), url('../fonts/glyphicons-regular.woff')
+		format('woff'), url('../fonts/glyphicons-regular.ttf')
+		format('truetype'),
+		url('../fonts/glyphicons-regular.svg#glyphiconsregular') format('svg');
+	font-weight: 400;
+	font-style: normal
+}
+
+.spark-Icon {
+    *display: inline;
+    *zoom: 1;
+}
+
+.spark-Icon:before {
+	font-family: 'Glyphicons Regular';
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	display: inline-block;
+	line-height: inherit;
+	vertical-align: bottom;
+	*display: inline;
+    *zoom: 1;
+	
+	/*Better Font Rendering ===========*/
+	-webkit-font-smoothing: subpixel-antialiased;
+	-Moz-osx-font-smoothing: grayscale;
+}
+
+.ie8 .font-loading .spark-Icon:after,
+.ie8 .font-loading .spark-Icon:before {
+	content: "" !important;
+}
+
+.spark-Icon-Glass:before {
+    content: "\E001"}
+.spark-Icon-Leaf:before {
+    content: "\E002"}
+.spark-Icon-Dog:before {
+    content: "\E003"}
+.spark-Icon-User:before {
+    content: "\E004"}
+.spark-Icon-Girl:before {
+    content: "\E005"}
+.spark-Icon-Car:before {
+    content: "\E006"}
+.spark-Icon-UserAdd:before {
+    content: "\E007"}
+.spark-Icon-UserRemove:before {
+    content: "\E008"}
+.spark-Icon-Film:before {
+    content: "\E009"}
+.spark-Icon-Magic:before {
+    content: "\E010"}
+.spark-Icon-Envelope:before {
+    content: "\2709"}
+.spark-Icon-Camera:before {
+    content: "\E011"}
+.spark-Icon-Heart:before {
+    content: "\E013"}
+.spark-Icon-BeachUmbrella:before {
+    content: "\E014"}
+.spark-Icon-Train:before {
+    content: "\E015"}
+.spark-Icon-Print:before {
+    content: "\E016"}
+.spark-Icon-Bin:before {
+    content: "\E017"}
+.spark-Icon-Music:before {
+    content: "\E018"}
+.spark-Icon-Note:before {
+    content: "\E019"}
+.spark-Icon-HeartEmpty:before {
+    content: "\E020"}
+.spark-Icon-Home:before {
+    content: "\E021"}
+.spark-Icon-Snowflake:before {
+    content: "\2744"}
+.spark-Icon-Fire:before {
+    content: "\E023"}
+.spark-Icon-Magnet:before {
+    content: "\E024"}
+.spark-Icon-Parents:before {
+    content: "\E025"}
+.spark-Icon-Binoculars:before {
+    content: "\E026"}
+.spark-Icon-Road:before {
+    content: "\E027"}
+.spark-Icon-Search:before {
+    content: "\E028"}
+.spark-Icon-Cars:before {
+    content: "\E029"}
+.spark-Icon-Notes2:before {
+    content: "\E030"}
+.spark-Icon-Pencil:before {
+    content: "\270F"}
+.spark-Icon-Bus:before {
+    content: "\E032"}
+.spark-Icon-WifiAlt:before {
+    content: "\E033"}
+.spark-Icon-Luggage:before {
+    content: "\E034"}
+.spark-Icon-OldMan:before {
+    content: "\E035"}
+.spark-Icon-Woman:before {
+    content: "\E036"}
+.spark-Icon-File:before {
+    content: "\E037"}
+.spark-Icon-Coins:before {
+    content: "\E038"}
+.spark-Icon-Airplane:before {
+    content: "\2708"}
+.spark-Icon-Notes:before {
+    content: "\E040"}
+.spark-Icon-Stats:before {
+    content: "\E041"}
+.spark-Icon-Charts:before {
+    content: "\E042"}
+.spark-Icon-PieChart:before {
+    content: "\E043"}
+.spark-Icon-Group:before {
+    content: "\E044"}
+.spark-Icon-Keys:before {
+    content: "\E045"}
+.spark-Icon-Calendar:before {
+    content: "\E046"}
+.spark-Icon-Router:before {
+    content: "\E047"}
+.spark-Icon-CameraSmall:before {
+    content: "\E048"}
+.spark-Icon-Dislikes:before {
+    content: "\E049"}
+.spark-Icon-Star:before {
+    content: "\E050"}
+.spark-Icon-Link:before {
+    content: "\E051"}
+.spark-Icon-EyeOpen:before {
+    content: "\E052"}
+.spark-Icon-EyeClose:before {
+    content: "\E053"}
+.spark-Icon-Alarm:before {
+    content: "\E054"}
+.spark-Icon-Clock:before {
+    content: "\E055"}
+.spark-Icon-Stopwatch:before {
+    content: "\E056"}
+.spark-Icon-Projector:before {
+    content: "\E057"}
+.spark-Icon-History:before {
+    content: "\E058"}
+.spark-Icon-Truck:before {
+    content: "\E059"}
+.spark-Icon-Cargo:before {
+    content: "\E060"}
+.spark-Icon-Compass:before {
+    content: "\E061"}
+.spark-Icon-Keynote:before {
+    content: "\E062"}
+.spark-Icon-Paperclip:before {
+    content: "\E063"}
+.spark-Icon-Power:before {
+    content: "\E064"}
+.spark-Icon-Lightbulb:before {
+    content: "\E065"}
+.spark-Icon-Tag:before {
+    content: "\E066"}
+.spark-Icon-Tags:before {
+    content: "\E067"}
+.spark-Icon-Cleaning:before {
+    content: "\E068"}
+.spark-Icon-Ruller:before {
+    content: "\E069"}
+.spark-Icon-Gift:before {
+    content: "\E070"}
+.spark-Icon-Umbrella:before {
+    content: "\2602"}
+.spark-Icon-Book:before {
+    content: "\E072"}
+.spark-Icon-Bookmark:before {
+    content: "\E073"}
+.spark-Icon-Wifi:before {
+    content: "\E074"}
+.spark-Icon-Cup:before {
+    content: "\E075"}
+.spark-Icon-Stroller:before {
+    content: "\E076"}
+.spark-Icon-Headphones:before {
+    content: "\E077"}
+.spark-Icon-Headset:before {
+    content: "\E078"}
+.spark-Icon-WarningSign:before {
+    content: "\E079"}
+.spark-Icon-Signal:before {
+    content: "\E080"}
+.spark-Icon-Retweet:before {
+    content: "\E081"}
+.spark-Icon-Refresh:before {
+    content: "\E082"}
+.spark-Icon-Roundabout:before {
+    content: "\E083"}
+.spark-Icon-Random:before {
+    content: "\E084"}
+.spark-Icon-Heat:before {
+    content: "\E085"}
+.spark-Icon-Repeat:before {
+    content: "\E086"}
+.spark-Icon-Display:before {
+    content: "\E087"}
+.spark-Icon-LogBook:before {
+    content: "\E088"}
+.spark-Icon-AddressBook:before {
+    content: "\E089"}
+.spark-Icon-Building:before {
+    content: "\E090"}
+.spark-Icon-Eyedropper:before {
+    content: "\E091"}
+.spark-Icon-Adjust:before {
+    content: "\E092"}
+.spark-Icon-Tint:before {
+    content: "\E093"}
+.spark-Icon-Crop:before {
+    content: "\E094"}
+.spark-Icon-VectorPathSquare:before {
+    content: "\E095"}
+.spark-Icon-VectorPathCircle:before {
+    content: "\E096"}
+.spark-Icon-VectorPathPolygon:before {
+    content: "\E097"}
+.spark-Icon-VectorPathLine:before {
+    content: "\E098"}
+.spark-Icon-VectorPathCurve:before {
+    content: "\E099"}
+.spark-Icon-VectorPathAll:before {
+    content: "\E100"}
+.spark-Icon-Font:before {
+    content: "\E101"}
+.spark-Icon-Italic:before {
+    content: "\E102"}
+.spark-Icon-Bold:before {
+    content: "\E103"}
+.spark-Icon-TextUnderline:before {
+    content: "\E104"}
+.spark-Icon-TextStrike:before {
+    content: "\E105"}
+.spark-Icon-TextHeight:before {
+    content: "\E106"}
+.spark-Icon-TextWidth:before {
+    content: "\E107"}
+.spark-Icon-TextResize:before {
+    content: "\E108"}
+.spark-Icon-LeftIndent:before {
+    content: "\E109"}
+.spark-Icon-RightIndent:before {
+    content: "\E110"}
+.spark-Icon-AlignLeft:before {
+    content: "\E111"}
+.spark-Icon-AlignCenter:before {
+    content: "\E112"}
+.spark-Icon-AlignRight:before {
+    content: "\E113"}
+.spark-Icon-Justify:before {
+    content: "\E114"}
+.spark-Icon-List:before {
+    content: "\E115"}
+.spark-Icon-TextSmaller:before {
+    content: "\E116"}
+.spark-Icon-TextBigger:before {
+    content: "\E117"}
+.spark-Icon-Embed:before {
+    content: "\E118"}
+.spark-Icon-EmbedClose:before {
+    content: "\E119"}
+.spark-Icon-Table:before {
+    content: "\E120"}
+.spark-Icon-MessageFull:before {
+    content: "\E121"}
+.spark-Icon-MessageEmpty:before {
+    content: "\E122"}
+.spark-Icon-MessageIn:before {
+    content: "\E123"}
+.spark-Icon-MessageOut:before {
+    content: "\E124"}
+.spark-Icon-MessagePlus:before {
+    content: "\E125"}
+.spark-Icon-MessageMinus:before {
+    content: "\E126"}
+.spark-Icon-MessageBan:before {
+    content: "\E127"}
+.spark-Icon-MessageFlag:before {
+    content: "\E128"}
+.spark-Icon-MessageLock:before {
+    content: "\E129"}
+.spark-Icon-MessageNew:before {
+    content: "\E130"}
+.spark-Icon-Inbox:before {
+    content: "\E131"}
+.spark-Icon-InboxPlus:before {
+    content: "\E132"}
+.spark-Icon-InboxMinus:before {
+    content: "\E133"}
+.spark-Icon-InboxLock:before {
+    content: "\E134"}
+.spark-Icon-InboxIn:before {
+    content: "\E135"}
+.spark-Icon-InboxOut:before {
+    content: "\E136"}
+.spark-Icon-CogWheel:before {
+    content: "\E137"}
+.spark-Icon-Cogwheels:before {
+    content: "\E138"}
+.spark-Icon-Picture:before {
+    content: "\E139"}
+.spark-Icon-AdjustAlt:before {
+    content: "\E140"}
+.spark-Icon-DatabaseLock:before {
+    content: "\E141"}
+.spark-Icon-DatabasePlus:before {
+    content: "\E142"}
+.spark-Icon-DatabaseMinus:before {
+    content: "\E143"}
+.spark-Icon-DatabaseBan:before {
+    content: "\E144"}
+.spark-Icon-FolderOpen:before {
+    content: "\E145"}
+.spark-Icon-FolderPlus:before {
+    content: "\E146"}
+.spark-Icon-FolderMinus:before {
+    content: "\E147"}
+.spark-Icon-FolderLock:before {
+    content: "\E148"}
+.spark-Icon-FolderFlag:before {
+    content: "\E149"}
+.spark-Icon-FolderNew:before {
+    content: "\E150"}
+.spark-Icon-Edit:before {
+    content: "\E151"}
+.spark-Icon-NewWindow:before {
+    content: "\E152"}
+.spark-Icon-Check:before {
+    content: "\E153"}
+.spark-Icon-Unchecked:before {
+    content: "\E154"}
+.spark-Icon-MoreWindows:before {
+    content: "\E155"}
+.spark-Icon-ShowBigThumbnails:before {
+    content: "\E156"}
+.spark-Icon-ShowThumbnails:before {
+    content: "\E157"}
+.spark-Icon-ShowThumbnailsWithLines:before {
+    content: "\E158"}
+.spark-Icon-ShowLines:before {
+    content: "\E159"}
+.spark-Icon-Playlist:before {
+    content: "\E160"}
+.spark-Icon-Imac:before {
+    content: "\E161"}
+.spark-Icon-Macbook:before {
+    content: "\E162"}
+.spark-Icon-Ipad:before {
+    content: "\E163"}
+.spark-Icon-Iphone:before {
+    content: "\E164"}
+.spark-Icon-IphoneTransfer:before {
+    content: "\E165"}
+.spark-Icon-IphoneExchange:before {
+    content: "\E166"}
+.spark-Icon-Ipod:before {
+    content: "\E167"}
+.spark-Icon-IpodShuffle:before {
+    content: "\E168"}
+.spark-Icon-EarPlugs:before {
+    content: "\E169"}
+.spark-Icon-Record:before {
+    content: "\E170"}
+.spark-Icon-StepBackward:before {
+    content: "\E171"}
+.spark-Icon-FastBackward:before {
+    content: "\E172"}
+.spark-Icon-Rewind:before {
+    content: "\E173"}
+.spark-Icon-Play:before {
+    content: "\E174"}
+.spark-Icon-Pause:before {
+    content: "\E175"}
+.spark-Icon-Stop:before {
+    content: "\E176"}
+.spark-Icon-Forward:before {
+    content: "\E177"}
+.spark-Icon-FastForward:before {
+    content: "\E178"}
+.spark-Icon-StepForward:before {
+    content: "\E179"}
+.spark-Icon-Eject:before {
+    content: "\E180"}
+.spark-Icon-FacetimeVideo:before {
+    content: "\E181"}
+.spark-Icon-DownloadAlt:before {
+    content: "\E182"}
+.spark-Icon-Mute:before {
+    content: "\E183"}
+.spark-Icon-VolumeDown:before {
+    content: "\E184"}
+.spark-Icon-Volume_up:before {
+    content: "\E185"}
+.spark-Icon-Screenshot:before {
+    content: "\E186"}
+.spark-Icon-Move:before {
+    content: "\E187"}
+.spark-Icon-More:before {
+    content: "\E188"}
+.spark-Icon-BrightnessReduce:before {
+    content: "\E189"}
+.spark-Icon-BrightnessIncrease:before {
+    content: "\E190"}
+.spark-Icon-CirclePlus:before {
+    content: "\E191"}
+.spark-Icon-CircleMinus:before {
+    content: "\E192"}
+.spark-Icon-CircleRemove:before {
+    content: "\E193"}
+.spark-Icon-CircleOk:before {
+    content: "\E194"}
+.spark-Icon-CircleQuestionMark:before {
+    content: "\E195"}
+.spark-Icon-CircleInfo:before {
+    content: "\E196"}
+.spark-Icon-CircleExclamationMark:before {
+    content: "\E197"}
+.spark-Icon-Remove:before {
+    content: "\E198"}
+.spark-Icon-Ok:before {
+    content: "\E199"}
+.spark-Icon-Ban:before {
+    content: "\E200"}
+.spark-Icon-Download:before {
+    content: "\E201"}
+.spark-Icon-Upload:before {
+    content: "\E202"}
+.spark-Icon-ShoppingCart:before {
+    content: "\E203"}
+.spark-Icon-Lock:before {
+    content: "\E204"}
+.spark-Icon-Unlock:before {
+    content: "\E205"}
+.spark-Icon-Electricity:before {
+    content: "\E206"}
+.spark-Icon-Ok2:before {
+    content: "\E207"}
+.spark-Icon-Remove2:before {
+    content: "\E208"}
+.spark-Icon-CartOut:before {
+    content: "\E209"}
+.spark-Icon-CartIn:before {
+    content: "\E210"}
+.spark-Icon-LeftArrow:before {
+    content: "\E211"}
+.spark-Icon-RightArrow:before {
+    content: "\E212"}
+.spark-Icon-DownArrow:before {
+    content: "\E213"}
+.spark-Icon-UpArrow:before {
+    content: "\E214"}
+.spark-Icon-ResizeSmall:before {
+    content: "\E215"}
+.spark-Icon-ResizeFull:before {
+    content: "\E216"}
+.spark-Icon-CircleArrowLeft:before {
+    content: "\E217"}
+.spark-Icon-CircleArrowRight:before {
+    content: "\E218"}
+.spark-Icon-CircleArrowTop:before {
+    content: "\E219"}
+.spark-Icon-CircleArrowDown:before {
+    content: "\E220"}
+.spark-Icon-PlayButton:before {
+    content: "\E221"}
+.spark-Icon-Unshare:before {
+    content: "\E222"}
+.spark-Icon-Share:before {
+    content: "\E223"}
+.spark-Icon-ChevronRight:before {
+    content: "\E224"}
+.spark-Icon-ChevronLeft:before {
+    content: "\E225"}
+.spark-Icon-Bluetooth:before {
+    content: "\E226"}
+.spark-Icon-Euro:before {
+    content: "\20AC"}
+.spark-Icon-Usd:before {
+    content: "\E228"}
+.spark-Icon-Gbp:before {
+    content: "\E229"}
+.spark-Icon-Retweet2:before {
+    content: "\E230"}
+.spark-Icon-Moon:before {
+    content: "\E231"}
+.spark-Icon-Sun:before {
+    content: "\2609"}
+.spark-Icon-Cloud:before {
+    content: "\2601"}
+.spark-Icon-Direction:before {
+    content: "\E234"}
+.spark-Icon-Brush:before {
+    content: "\E235"}
+.spark-Icon-Pen:before {
+    content: "\E236"}
+.spark-Icon-ZoomIn:before {
+    content: "\E237"}
+.spark-Icon-ZoomOut:before {
+    content: "\E238"}
+.spark-Icon-Pin:before {
+    content: "\E239"}
+.spark-Icon-Albums:before {
+    content: "\E240"}
+.spark-Icon-RotationLock:before {
+    content: "\E241"}
+.spark-Icon-Flash:before {
+    content: "\E242"}
+.spark-Icon-GoogleMaps:before {
+    content: "\E243"}
+.spark-Icon-Anchor:before {
+    content: "\2693"}
+.spark-Icon-Conversation:before {
+    content: "\E245"}
+.spark-Icon-Chat:before {
+    content: "\E246"}
+.spark-Icon-Male:before {
+    content: "\E247"}
+.spark-Icon-Female:before {
+    content: "\E248"}
+.spark-Icon-Asterisk:before {
+    content: "\002A"}
+.spark-Icon-Divide:before {
+    content: "\00F7"}
+.spark-Icon-SnorkelDiving:before {
+    content: "\E251"}
+.spark-Icon-ScubaDiving:before {
+    content: "\E252"}
+.spark-Icon-OxygenBottle:before {
+    content: "\E253"}
+.spark-Icon-Fins:before {
+    content: "\E254"}
+.spark-Icon-Fishes:before {
+    content: "\E255"}
+.spark-Icon-Boat:before {
+    content: "\E256"}
+.spark-Icon-Delete:before {
+    content: "\E257"}
+.spark-Icon-SheriffsStar:before {
+    content: "\E258"}
+.spark-Icon-Qrcode:before {
+    content: "\E259"}
+.spark-Icon-Barcode:before {
+    content: "\E260"}
+.spark-Icon-Pool:before {
+    content: "\E261"}
+.spark-Icon-Buoy:before {
+    content: "\E262"}
+.spark-Icon-Spade:before {
+    content: "\E263"}
+.spark-Icon-Bank:before {
+    content: "\E264"}
+.spark-Icon-Vcard:before {
+    content: "\E265"}
+.spark-Icon-ElectricalPlug:before {
+    content: "\E266"}
+.spark-Icon-Flag:before {
+    content: "\E267"}
+.spark-Icon-CreditCard:before {
+    content: "\E268"}
+.spark-Icon-KeyboardWireless:before {
+    content: "\E269"}
+.spark-Icon-KeyboardWired:before {
+    content: "\E270"}
+.spark-Icon-Sield:before {
+    content: "\E271"}
+.spark-Icon-Ring:before {
+    content: "\02DA"}
+.spark-Icon-Cake:before {
+    content: "\E273"}
+.spark-Icon-Drink:before {
+    content: "\E274"}
+.spark-Icon-Beer:before {
+    content: "\E275"}
+.spark-Icon-FastFood:before {
+    content: "\E276"}
+.spark-Icon-Cutlery:before {
+    content: "\E277"}
+.spark-Icon-Pizza:before {
+    content: "\E278"}
+.spark-Icon-BirthdayCake:before {
+    content: "\E279"}
+.spark-Icon-Tablet:before {
+    content: "\E280"}
+.spark-Icon-Settings:before {
+    content: "\E281"}
+.spark-Icon-Bullets:before {
+    content: "\E282"}
+.spark-Icon-Cardio:before {
+    content: "\E283"}
+.spark-Icon-Tshirt:before {
+    content: "\E284"}
+.spark-Icon-Pants:before {
+    content: "\E285"}
+.spark-Icon-Sweater:before {
+    content: "\E286"}
+.spark-Icon-Fabric:before {
+    content: "\E287"}
+.spark-Icon-Leather:before {
+    content: "\E288"}
+.spark-Icon-Scissors:before {
+    content: "\E289"}
+.spark-Icon-Bomb:before {
+    content: "\E290"}
+.spark-Icon-Skull:before {
+    content: "\E291"}
+.spark-Icon-Celebration:before {
+    content: "\E292"}
+.spark-Icon-TeaKettle:before {
+    content: "\E293"}
+.spark-Icon-FrenchPress:before {
+    content: "\E294"}
+.spark-Icon-CoffeeCup:before {
+    content: "\E295"}
+.spark-Icon-Pot:before {
+    content: "\E296"}
+.spark-Icon-Grater:before {
+    content: "\E297"}
+.spark-Icon-Kettle:before {
+    content: "\E298"}
+.spark-Icon-Hospital:before {
+    content: "\E299"}
+.spark-Icon-HospitalH:before {
+    content: "\E300"}
+.spark-Icon-Microphone:before {
+    content: "\E301"}
+.spark-Icon-Webcam:before {
+    content: "\E302"}
+.spark-Icon-TempleChristianityChurch:before {
+    content: "\E303"}
+.spark-Icon-TempleIslam:before {
+    content: "\E304"}
+.spark-Icon-TempleHindu:before {
+    content: "\E305"}
+.spark-Icon-TempleBuddhist:before {
+    content: "\E306"}
+.spark-Icon-Bicycle:before {
+    content: "\E307"}
+.spark-Icon-LifePreserver:before {
+    content: "\E308"}
+.spark-Icon-ShareAlt:before {
+    content: "\E309"}
+.spark-Icon-Comments:before {
+    content: "\E310"}
+.spark-Icon-Flower:before {
+    content: "\2698"}
+.spark-Icon-Baseball:before {
+    content: "\26BE"}
+.spark-Icon-Rugby:before {
+    content: "\E313"}
+.spark-Icon-Ox:before {
+    content: "\E314"}
+.spark-Icon-TableTennis:before {
+    content: "\E315"}
+.spark-Icon-Bowling:before {
+    content: "\E316"}
+.spark-Icon-TreeConifer:before {
+    content: "\E317"}
+.spark-Icon-TreeDeciduous:before {
+    content: "\E318"}
+.spark-Icon-MoreItems:before {
+    content: "\E319"}
+.spark-Icon-Sort:before {
+    content: "\E320"}
+.spark-Icon-Filter:before {
+    content: "\E321"}
+.spark-Icon-Gamepad:before {
+    content: "\E322"}
+.spark-Icon-PlayingDices:before {
+    content: "\E323"}
+.spark-Icon-Calculator:before {
+    content: "\E324"}
+.spark-Icon-Tie:before {
+    content: "\E325"}
+.spark-Icon-Wallet:before {
+    content: "\E326"}
+.spark-Icon-Piano:before {
+    content: "\E327"}
+.spark-Icon-Sampler:before {
+    content: "\E328"}
+.spark-Icon-Podium:before {
+    content: "\E329"}
+.spark-Icon-SoccerBall:before {
+    content: "\E330"}
+.spark-Icon-Blog:before {
+    content: "\E331"}
+.spark-Icon-Dashboard:before {
+    content: "\E332"}
+.spark-Icon-Certificate:before {
+    content: "\E333"}
+.spark-Icon-Bell:before {
+    content: "\E334"}
+.spark-Icon-Candle:before {
+    content: "\E335"}
+.spark-Icon-Pushpin:before {
+    content: "\E336"}
+.spark-Icon-IphoneShake:before {
+    content: "\E337"}
+.spark-Icon-PinFlag:before {
+    content: "\E338"}
+.spark-Icon-Turtle:before {
+    content: "\E339"}
+.spark-Icon-Rabbit:before {
+    content: "\E340"}
+.spark-Icon-Globe:before {
+    content: "\E341"}
+.spark-Icon-Briefcase:before {
+    content: "\E342"}
+.spark-Icon-Hdd:before {
+    content: "\E343"}
+.spark-Icon-ThumbsUp:before {
+    content: "\E344"}
+.spark-Icon-ThumbsDown:before {
+    content: "\E345"}
+.spark-Icon-HandRight:before {
+    content: "\E346"}
+.spark-Icon-HandLeft:before {
+    content: "\E347"}
+.spark-Icon-HandUp:before {
+    content: "\E348"}
+.spark-Icon-HandDown:before {
+    content: "\E349"}
+.spark-Icon-Fullscreen:before {
+    content: "\E350"}
+.spark-Icon-ShoppingBag:before {
+    content: "\E351"}
+.spark-Icon-BookOpen:before {
+    content: "\E352"}
+.spark-Icon-Nameplate:before {
+    content: "\E353"}
+.spark-Icon-NameplateAlt:before {
+    content: "\E354"}
+.spark-Icon-Vases:before {
+    content: "\E355"}
+.spark-Icon-Bullhorn:before {
+    content: "\E356"}
+.spark-Icon-Dumbbell:before {
+    content: "\E357"}
+.spark-Icon-Suitcase:before {
+    content: "\E358"}
+.spark-Icon-FileImport:before {
+    content: "\E359"}
+.spark-Icon-FileExport:before {
+    content: "\E360"}
+.spark-Icon-Bug:before {
+    content: "\E361"}
+.spark-Icon-Crown:before {
+    content: "\E362"}
+.spark-Icon-Smoking:before {
+    content: "\E363"}
+.spark-Icon-CloudDownload:before {
+    content: "\E364"}
+.spark-Icon-CloudUpload:before {
+    content: "\E365"}
+.spark-Icon-Restart:before {
+    content: "\E366"}
+.spark-Icon-SecurityCamera:before {
+    content: "\E367"}
+.spark-Icon-Expand:before {
+    content: "\E368"}
+.spark-Icon-Collapse:before {
+    content: "\E369"}
+.spark-Icon-CollapseTop:before {
+    content: "\E370"}
+.spark-Icon-GlobeAf:before {
+    content: "\E371"}
+.spark-Icon-Global:before {
+    content: "\E372"}
+.spark-Icon-Spray:before {
+    content: "\E373"}
+.spark-Icon-Nails:before {
+    content: "\E374"}
+.spark-Icon-ClawHammer:before {
+    content: "\E375"}
+.spark-Icon-ClassicHammer:before {
+    content: "\E376"}
+.spark-Icon-HandSaw:before {
+    content: "\E377"}
+.spark-Icon-Riflescope:before {
+    content: "\E378"}
+.spark-Icon-ElectricalSocketEu:before {
+    content: "\E379"}
+.spark-Icon-ElectricalSocket_us:before {
+    content: "\E380"}
+.spark-Icon-MessageForward:before {
+    content: "\E381"}
+.spark-Icon-CoatHanger:before {
+    content: "\E382"}
+.spark-Icon-Dress:before {
+    content: "\E383"}
+.spark-Icon-Bathrobe:before {
+    content: "\E384"}
+.spark-Icon-Shirt:before {
+    content: "\E385"}
+.spark-Icon-Underwear:before {
+    content: "\E386"}
+.spark-Icon-Login:before {
+    content: "\E387"}
+.spark-Icon-Logout:before {
+    content: "\E388"}
+.spark-Icon-Exit:before {
+    content: "\E389"}
+.spark-Icon-NewWindowAlt:before {
+    content: "\E390"}
+.spark-Icon-VideoSd:before {
+    content: "\E391"}
+.spark-Icon-VideoHd:before {
+    content: "\E392"}
+.spark-Icon-Subtitles:before {
+    content: "\E393"}
+.spark-Icon-SoundStereo:before {
+    content: "\E394"}
+.spark-Icon-SoundDolby:before {
+    content: "\E395"}
+.spark-Icon-Sound51:before {
+    content: "\E396"}
+.spark-Icon-Sound61:before {
+    content: "\E397"}
+.spark-Icon-Sound71:before {
+    content: "\E398"}
+.spark-Icon-CopyrightMark:before {
+    content: "\E399"}
+.spark-Icon-RegistrationMark:before {
+    content: "\E400"}
+.spark-Icon-Radar:before {
+    content: "\E401"}
+.spark-Icon-Skateboard:before {
+    content: "\E402"}
+.spark-Icon-GolfCourse:before {
+    content: "\E403"}
+.spark-Icon-Sorting:before {
+    content: "\E404"}
+.spark-Icon-SortByAlphabet:before {
+    content: "\E405"}
+.spark-Icon-SortByAlphabetAlt:before {
+    content: "\E406"}
+.spark-Icon-SortByOrder:before {
+    content: "\E407"}
+.spark-Icon-SortByOrderAlt:before {
+    content: "\E408"}
+.spark-Icon-SortByAttributes:before {
+    content: "\E409"}
+.spark-Icon-SortByAttributesAlt:before {
+    content: "\E410"}
+.spark-Icon-Compressed:before {
+    content: "\E411"}
+.spark-Icon-Package:before {
+    content: "\E412"}
+.spark-Icon-CloudPlus:before {
+    content: "\E413"}
+.spark-Icon-CloudMinus:before {
+    content: "\E414"}
+.spark-Icon-DiskSave:before {
+    content: "\E415"}
+.spark-Icon-DiskOpen:before {
+    content: "\E416"}
+.spark-Icon-DiskSaved:before {
+    content: "\E417"}
+.spark-Icon-DiskRemove:before {
+    content: "\E418"}
+.spark-Icon-DiskImport:before {
+    content: "\E419"}
+.spark-Icon-DiskExport:before {
+    content: "\E420"}
+.spark-Icon-Tower:before {
+    content: "\E421"}
+.spark-Icon-Send:before {
+    content: "\E422"}
+.spark-Icon-GitBranch:before {
+    content: "\E423"}
+.spark-Icon-GitCreate:before {
+    content: "\E424"}
+.spark-Icon-GitPrivate:before {
+    content: "\E425"}
+.spark-Icon-GitDelete:before {
+    content: "\E426"}
+.spark-Icon-GitMerge:before {
+    content: "\E427"}
+.spark-Icon-GitPullRequest:before {
+    content: "\E428"}
+.spark-Icon-GitCompare:before {
+    content: "\E429"}
+.spark-Icon-GitCommit:before {
+    content: "\E430"}
+.spark-Icon-ConstructionCone:before {
+    content: "\E431"}
+.spark-Icon-ShoeSteps:before {
+    content: "\E432"}
+.spark-Icon-Plus:before {
+    content: "\002B"}
+.spark-Icon-Minus:before {
+    content: "\2212"}
+.spark-Icon-Redo:before {
+    content: "\E435"}
+.spark-Icon-Undo:before {
+    content: "\E436"}
+.spark-Icon-Golf:before {
+    content: "\E437"}
+.spark-Icon-Hockey:before {
+    content: "\E438"}
+.spark-Icon-Pipe:before {
+    content: "\E439"}
+.spark-Icon-Wrench:before {
+    content: "\E440"}
+.spark-Icon-FolderClosed:before {
+    content: "\E441"}
+.spark-Icon-PhoneAlt:before {
+    content: "\E442"}
+.spark-Icon-Earphone:before {
+    content: "\E443"}
+.spark-Icon-FloppyDisk:before {
+    content: "\E444"}
+.spark-Icon-FloppySaved:before {
+    content: "\E445"}
+.spark-Icon-FloppyRemove:before {
+    content: "\E446"}
+.spark-Icon-FloppySave:before {
+    content: "\E447"}
+.spark-Icon-FloppyOpen:before {
+    content: "\E448"}
+.spark-Icon-Translate:before {
+    content: "\E449"}
+.spark-Icon-Fax:before {
+    content: "\E450"}
+.spark-Icon-Factory:before {
+    content: "\E451"}
+.spark-Icon-ShopWindow:before {
+    content: "\E452"}
+.spark-Icon-Shop:before {
+    content: "\E453"}
+.spark-Icon-Kiosk:before {
+    content: "\E454"}
+.spark-Icon-KioskWheels:before {
+    content: "\E455"}
+.spark-Icon-KioskLight:before {
+    content: "\E456"}
+.spark-Icon-KioskFood:before {
+    content: "\E457"}
+.spark-Icon-Transfer:before {
+    content: "\E458"}
+.spark-Icon-Money:before {
+    content: "\E459"}
+.spark-Icon-Header:before {
+    content: "\E460"}
+.spark-Icon-Blacksmith:before {
+    content: "\E461"}
+.spark-Icon-SawBlade:before {
+    content: "\E462"}
+.spark-Icon-Basketball:before {
+    content: "\E463"}
+.spark-Icon-Server:before {
+    content: "\E464"}
+.spark-Icon-ServerPlus:before {
+    content: "\E465"}
+.spark-Icon-ServerMinus:before {
+    content: "\E466"}
+.spark-Icon-ServerBan:before {
+    content: "\E467"}
+.spark-Icon-ServerFlag:before {
+    content: "\E468"}
+.spark-Icon-ServerLock:before {
+    content: "\E469"}
+.spark-Icon-ServerNew:before {
+    content: "\E470"}

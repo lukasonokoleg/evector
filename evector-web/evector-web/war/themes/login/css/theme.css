@@ -1,0 +1,63 @@
+/** 
+ * This file LOGIN contains theme style properties for VVSIS components:
+ * colors, backgrounds, icons (sizes dependent to background images also goes here)
+ *
+ * Contents:
+ *  1. ------------------------------- Page Content --------------------------------
+ *  2. ------------------------------- Label Widgets -------------------------------
+ *  3. --------------------------------- Tab Bars ----------------------------------
+
+/* (+) ------------------------------- Page Content -------------------------------- */
+
+.imageBlock .homeLink {
+	background-image: url(../img/vanduo.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	height: 137px;
+	width: 545px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.homeLink {
+	filter: alpha('opacity = 70');
+    opacity: 0.7;
+}
+
+.homeLink:hover {
+	filter: alpha('opacity = 100');
+    opacity: 1;
+}
+
+.loginText {
+	background: #F0F4F8;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.loginFooter {
+	border: 1px solid #e3e9ec;
+	border-top: none;
+	background-color: #eef2f5;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	-moz-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+}
+
+/* (-) ------------------------------- Page Content -------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+.spark-Field-label {
+    text-transform: none;
+    font-weight: normal;
+}
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) --------------------------------- Tab Bars ---------------------------------- */
+.loginTabs .gwt-TabPanelBottom {
+	border-bottom: none;
+	-webkit-border-radius: 3px 3px 0px 0px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
+}
+/* (-) --------------------------------- Tab Bars ---------------------------------- */

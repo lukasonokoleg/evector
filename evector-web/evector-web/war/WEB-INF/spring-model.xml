@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+
+	<!-- Scans within the base package of the application for @Component classes 
+		to configure as beans -->
+	<context:annotation-config />
+	<context:component-scan base-package="univ.evector.internal.service.impl" />
+	<context:component-scan base-package="univ.evector.db" />
+	<context:component-scan base-package="univ.evector.gwt.service" />
+	<context:component-scan base-package="univ.evector.facebook" />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<bean
+		class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor" />
+
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<bean id="userSessionHolder" class="univ.evector.beans.UserSessionHolder"
+		scope="session" />
+
+	<bean id="evectorTransliterationHelper"
+		class="lt.jmsys.spark.gwt.suggest.oracle.EvectorTransliterationHelper" />
+
+
+	<!-- Privilege check configuration -->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
+	<bean id="privilegeCheckAdvice" class="univ.evector.security.PrivilegeCheckAdvice" />
+
+	<bean id="serviceAccessControlAdvisor" class="univ.evector.security.ServiceMatchPointcutAdvisor">
+		<property name="nameFilter" value="univ.evector.gwt.service" />
+		<property name="advice" ref="privilegeCheckAdvice" />
+	</bean>
+
+	<bean id="internalServiceAccessControlAdvisor" class="univ.evector.security.ServiceMatchPointcutAdvisor">
+		<property name="nameFilter" value="univ.evector.internal.service" />
+		<property name="advice" ref="privilegeCheckAdvice" />
+	</bean>
+	<!-- end of privilege check configuration -->
+
+</beans>

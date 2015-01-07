@@ -1,0 +1,2 @@
+serviceClass: lt.jmsys.spark.gwt.application.client.common.service.SessionService
+path: 4204030331FD88C82DBD9066CB089984.gwt.rpc

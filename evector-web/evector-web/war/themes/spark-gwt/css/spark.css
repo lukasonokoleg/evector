@@ -1,0 +1,1757 @@
+/**
+ * This file contains base style properties for spark components.
+ * These properties most likely should not be modified, properties that
+ * needs to be modified should go to:
+ * 		1) layout.css - fonts, dimensions, paddings and margins, positions...
+ *		2) theme.css - colors, backgrounds, icons (sizes dependent to background images also goes there)
+ *
+ * Contents:
+ *  1. ------------------------------- Page Content --------------------------------
+ *  2. ------------------------------- Input Fields --------------------------------
+ *	3. -------------------------------- Date Field ---------------------------------
+ *  4. ------------------------------ List boxes arrow -----------------------------
+ *  5. -------------------------------- List Field ---------------------------------
+ *  6. ------------------------------- Suggest Field -------------------------------
+ *  7. ---------------------------------- Shuttle ----------------------------------
+ *  8. ------------------------------- Label Widgets -------------------------------
+ *  9. ---------------------------------- Buttons ----------------------------------
+ * 10. -------------------------------- Button Box ---------------------------------
+ * 11. -------------------------------- Field panel --------------------------------
+ * 12. ------------------------------ List Component -------------------------------
+ * 13. ------------------------------ Table Component ------------------------------
+ * 14. ------------------------------- Table Command -------------------------------
+ * 15. ------------------------------ Paging Component -----------------------------
+ * 16. ----------------------------------- Cell ------------------------------------
+ * 17. ---------------------------- Simple Column Header ---------------------------
+ * 18. ------------------------------- Modal Widgets -------------------------------
+ * 19. ------------------------------- Info Button ---------------------------------
+ * 20. ------------------------------- Message panel -------------------------------
+ * 21. --------------------------------- Tool Tip ----------------------------------
+ * 22. --------------------------------- Info Box ----------------------------------
+ * 23. --------------------------------- Calendar ----------------------------------
+ * 24. -------------------------------- Stack Page ---------------------------------
+ * 25. -------------------------------- Message Icon ------------------------------- 
+ * 26. -------------------------------- Wizard Panel ------------------------------- 
+ */
+ 
+/* (+) ------------------------------- Page Content -------------------------------- */
+body,table td,select {
+	font-size: 10pt;
+}
+.cursor {
+	cursor: pointer;
+}
+.gwt-Hyperlink {
+    cursor: pointer; /* we usually want this functionality by default */
+    cursor: hand;
+}
+.spark-InactivePanel {
+    background-color: #000000;
+    filter: alpha('opacity = 40');
+    opacity: 0.4;
+}
+/* (-) ------------------------------- Page Content -------------------------------- */
+/* (+) ------------------------------- Input Fields -------------------------------- */
+/** imitate input field focus **/
+.spark-SuggestField-focused,
+.spark-DateField-focused {
+    outline-offset: -2px !important;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+/** Do not show focus **/
+.spark-RadioField-focused {
+	outline: 0 !important;
+}
+
+/** remove inner box focus styles **/
+.spark-SuggestField-input,
+.spark-DateField .spark-DateField-textBox,
+.spark-DateFullTimeField .spark-DateField-textBox,
+.spark-DateShortTimeField .spark-DateField-textBox,
+.spark-DateHoursField .spark-DateField-textBox {
+	outline: none !important;
+}
+
+/** first DOM element in SuggestField is not used and faulty.
+ *  Remove this when element will be removed from GWT code **/
+.spark-SuggestField>div:FIRST-CHILD {
+	display: none;
+}
+
+input[disabled], select[disabled] {
+	cursor: auto;
+}
+
+/* for chrome */
+.spark-TextField-textBox,
+.spark-DateField-textBox,
+.spark-DecimalField-textBox,
+.spark-PasswordField-textBox,
+.spark-IntegerField-textBox,
+.spark-LongField-textBox,
+.spark-TextAreaField {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.spark-Field-notvalid .spark-SuggestField,
+.spark-DateField.spark-Field-notvalid,
+.spark-SuggestField.spark-Field-notvalid,
+.spark-RadioField.spark-Field-notvalid,
+.spark-ListField.spark-Field-notvalid,
+input.spark-Field.spark-Field-notvalid,
+select.spark-Field.spark-Field-notvalid {
+	border: 1px solid red;
+}
+.spark-Field.spark-Field-hidden {
+	display: none;
+}
+.spark-Field-displayOnly {
+	display: inline-block;
+	white-space: nowrap;
+}
+.spark-Field-displayOnly.spark-Field-displayOnly-textArea {
+	white-space: normal;
+}
+
+/** decimal fields **/
+.spark-DecimalField-textBox {
+	text-align: right;
+	width: 10em;
+}
+.spark-LongField-textBox {
+    text-align: right;
+/*	width: 10em; */
+}
+.spark-LongField-textBox + .spark-Field-displayOnly,
+.spark-DecimalField-textBox + .spark-Field-displayOnly {
+	text-align: right;
+}
+
+/** LinkToField **/
+.spark-LinkToField {
+    cursor: pointer;	
+}
+.spark-LinkToField:hover {
+    text-decoration: underline;
+}
+/** LanguageField **/
+.spark-LanguageField {
+	background: none;
+	border: none;
+	padding: 0px;
+	cursor: pointer;
+}
+.spark-LanguageField-popup a.spark-DropdownButtonItem>img {
+	margin-bottom: -3px;
+	padding-right: 3px;
+}
+/* (-) ------------------------------- Input Fields -------------------------------- */
+/* (+) -------------------------------- Date Field --------------------------------- */
+.spark-DateField,
+.spark-DateFullTimeField, 
+.spark-DateShortTimeField, 
+.spark-DateHoursField {
+	white-space: nowrap;
+	background: #fff;
+    border: 1px solid #ececec;
+    border-top: 1px solid #b6b6b6;
+    padding-right: 18px;
+}
+.spark-DateField>*,
+.spark-DateFullTimeField>*,
+.spark-DateShortTimeField>*,
+.spark-DateHoursField>* {
+	vertical-align: middle;
+}
+.spark-DateField-textBox,
+.spark-DateFullTimeField .spark-DateField-textBox,
+.spark-DateShortTimeField .spark-DateField-textBox,
+.spark-DateHoursField .spark-DateField-textBox {
+    background: transparent;
+    padding: 0px;
+    margin-right: 2px;
+    border: none !important;
+    width: 100%;
+}
+.spark-DateField-textBox-readonly {
+	background-color: #F0F0F0;
+}
+.spark-DateField {
+    min-width: 80px;
+    width: 80px;
+}
+.spark-DateFullTimeField {
+    min-width: 145px;
+    width: 145px;
+}
+.spark-DateShortTimeField {
+    min-width: 125px;
+    width: 125px;
+}
+.spark-DateHoursField {
+    min-width: 100px;
+    width: 100px;
+}
+.spark-DateField-button{
+	background: url('../img/1day.png') no-repeat 0px 0px; 
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+	cursor: hand;
+    margin-right: -18px;
+    display: inline-block;
+}
+.spark-TimeField-textBox {
+	width: 55px;
+}
+/* (-) -------------------------------- Date Field --------------------------------- */
+/* (+) ------------------------------ List boxes arrow ----------------------------- */
+select,
+.spark-SuggestField-arrow,
+button.spark-DropdownListBox.spark-Field-textBox {
+    background: url('../img/icon_expand.png') no-repeat 97% 50%; 
+	background-position: right 4px center;
+	cursor: pointer;
+}
+select {
+	background-size: 0;
+	-webkit-appearance: none;
+	-webkit-background-size: 6px 5px;
+	-webkit-padding-end: 10px;
+}
+select[disabled]{
+	-webkit-background-size: 0px;
+}
+/* (-) ------------------------------ List boxes arrow ----------------------------- */
+/* (+) -------------------------------- List Field --------------------------------- */
+.spark-ListField,
+.gwt-ListBox {	
+	font-size: 10pt !important;
+}
+
+/* why? */
+* html .spark-ListField,
+* html .gwt-ListBox {	
+	font-size: 8pt !important;
+}
+/* (-) -------------------------------- List Field --------------------------------- */
+/* (+) ------------------------------- Suggest Field ------------------------------- */
+.spark-SuggestField {
+    padding: 0;
+}
+.spark-SuggestField-input {
+    height: 100%;
+    margin: 0;
+    border: 0 inset; /* chrome adds insets to inputs which results into margins of -2px */
+    padding: 0;
+}
+.spark-SuggestField-arrow {
+    width: 18px;
+    height: 100%;
+    margin: 0;
+    border: 0 inset; /* chrome adds insets to inputs which results into margins of -2px */
+    padding: 0;
+}
+.spark-SuggestField-clear {
+    width: 18px;
+    height: 100%;
+    margin: 0;
+    border: 0 inset; /* chrome adds insets to inputs which results into margins of -2px */
+    padding: 0;
+    background: url('../img/suggestClear.png') no-repeat center right;
+    cursor: pointer;
+}
+.spark-SuggestField-backgroundText, 
+.spark-dateField-background, 
+input.placeholder, 
+textarea.placeholder, 
+select.placeholder, 
+option.placeholder {
+    color: #cccccc !important;
+    /*font-style: italic !important;*/
+}
+/* (-) ------------------------------- Suggest Field ------------------------------- */
+/* (+) ---------------------------------- Shuttle ---------------------------------- */
+.spark-shuttle {
+    border: 1px solid #a8a8a8;  
+    width: 100%;
+}
+.spark-shuttleSrcLabel {
+    border: 1px solid #a8a8a8;
+    text-align: center;
+    background: url('../img/bg02.png') repeat-x scroll 0 -150px;  
+}
+.spark-shuttleDstLabel {
+    border: 1px solid #a8a8a8;  
+    text-align: center;  
+    background: url('../img/bg02.png') repeat-x scroll 0 -150px;  
+}
+.spark-shuttleSrcList {
+    border: 1px solid #a8a8a8;  
+    width: 100%;  
+}
+.spark-shuttleDstList {
+    border: 1px solid #a8a8a8;  
+    width: 100%;  
+}
+.spark-shuttleAddButton {
+    border: 1px solid #a8a8a8;  
+}
+.spark-shuttleAddAllButton {
+    border: 1px solid #a8a8a8;  
+}
+.spark-shuttleDelButton {
+    border: 1px solid #a8a8a8;  
+}
+.spark-shuttleDellAllButton {
+    border: 1px solid #a8a8a8;  
+}
+.spark-shuttleFilter {
+    border: 1px solid #a8a8a8;  
+    width: 100%;  
+    padding: 0;  
+}
+.spark-ShuttleFilterBackgroundText {
+    color: #BBBBBB;
+    font-style: italic;
+}
+/* (-) ---------------------------------- Shuttle ---------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+.spark-Field-label {
+	font-weight: normal;
+	font-size: small;
+	font-family: sans-serif;
+	text-align: right;
+	white-space: nowrap;
+	cursor: default;
+}
+.spark-Field-label-required {
+	font-weight: bold;
+}
+.spark-Field-label.spark-Field-label-notvalid {
+	/* color: red; */
+}
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) ---------------------------------- Buttons ---------------------------------- */
+/** button **/
+.spark-Button[disabled],
+.spark-Button[disabled]:active,
+.spark-Button[disabled]:hover,
+button.gwt-Button[disabled],
+button.gwt-Button[disabled]:active,
+button.gwt-Button[disabled]:hover {
+	cursor: auto;
+}
+
+.spark-Button,
+button.gwt-Button {
+	cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.spark-Button .spark-Icon,
+button.gwt-Button .spark-Icon {
+	vertical-align: top;
+}
+
+/** anchor **/
+.spark-Anchor {
+	text-decoration: underline;
+}
+
+/** icon **/
+.spark-Icon {
+	display: inline-block;
+    text-decoration: none;
+}
+.spark-Icon-right {
+	float: right;
+}
+.spark-Icon-small {
+	font-size: 9px;	
+	vertical-align: top;
+}
+/* set space between icon and text */
+.spark-Icon {
+	margin-right: 5px;
+	height: 16px;
+}
+.spark-Icon-right {
+	margin-right: 0px;
+	margin-left: 5px;
+}
+
+/** colors **/
+.spark-Button[disabled] .spark-Icon {
+	color: #909090 !important;
+}
+.spark-Icon {
+	color: #666666;
+}
+.spark-Button:hover .spark-Icon,
+.spark-Anchor:hover .spark-Icon,
+.spark-Icon:hover {
+	color: #333333;
+}
+.spark-Icon-inherited {
+	color: inherit !important;
+}
+
+/** double icon element **/
+.spark-DoubleIcon .spark-Icon {
+	display: block;
+}
+
+/** custom Buttons/Anchors **/
+.spark-InfoButton .spark-Icon {
+	vertical-align: top;
+}
+.dialogTopCenterInner .Caption .spark-Icon {
+	vertical-align: top;
+	margin-top: 3px;
+}
+/* (-) ---------------------------------- Buttons ---------------------------------- */
+/* (+) -------------------------------- Button Box --------------------------------- */
+.spark-ButtonBox-panel {
+	border: solid 1px #888888;
+	background-color: #ffffff; 
+	padding: 4px;
+}
+.spark-ButtonBox-icon,
+.spark-ButtonBox-icon-toggled {
+	background: url('../img/button-arrows.gif') no-repeat scroll 0px -4px;	
+	font-size: 0;
+	width: 8px;
+	height: 4px;
+	margin-left: 4px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.spark-ButtonBox-icon-toggled {
+	background: url('../img/button-arrows.gif') no-repeat scroll 0px -20px;	
+}
+/* (-) -------------------------------- Button Box --------------------------------- */
+/* (+) -------------------------------- Field panel -------------------------------- */
+.spark-FieldsGroup {
+	margin: 5px;
+}
+
+.spark-FieldWrapper-inline,
+.spark-FieldWrapper-inline .spark-Field,
+.spark-FieldWrapper-inline .spark-Field-label {
+	display: inline-block;
+}
+
+.spark-FieldWrapper-labelTop .spark-Field-label { 
+	text-align: left;
+	display: block;
+}
+
+.spark-FieldPanel .spark-Field,
+.spark-FieldPanel .gwt-Button {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+.spark-FieldPanel > table >tbody > tr > td {
+	vertical-align: baseline;
+}
+.spark-FieldPanel .gwt-Button {
+	padding-top:0;
+	padding-bottom:0;
+}
+.spark-FieldPanel .spark-RadioField {
+	height: auto;
+}
+.spark-FieldPanel .gwt-Button {
+	line-height: auto;
+}
+/* (-) -------------------------------- Field panel -------------------------------- */
+/* (+) ------------------------------ List Component ------------------------------- */
+.gwt-TreeItem {
+    display: block !important; /* IE8 browser mode displays 'inline' as shifted down */
+}
+.spark-treeItemLabel {
+    white-space: nowrap; /* IE7 mode does not catch inherited nowrap */
+}
+.spark-ListComponentView-RemoveItemButton {
+    cursor: pointer;    
+}
+/* (-) ------------------------------ List Component ------------------------------- */
+/* (+) ------------------------------ Table Component ------------------------------ */
+/** query inputs **/
+/* Should not apply to browse form's query fields */
+.spark-TableComponent-queryInput .spark-SuggestField,
+.spark-TableComponent-queryInput .spark-TextField-textBox,
+.spark-TableComponent-queryInput .spark-LongField-textBox,
+.spark-TableComponent-queryInput .spark-PasswordField-textBox {
+	margin: 0px;
+	width: 100%;
+}
+.spark-TableComponent-headerRow > td table {
+    width: 100%;
+}
+.spark-RangeQueryInput {
+	display: inline;
+}
+.spark-RangeQueryInput input {
+	width: 49%;
+	margin: 0px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.spark-RangeQueryInput .spark-RangeFieldA {
+	float: left;
+}
+.spark-RangeQueryInput .spark-RangeFieldB {
+	float: right;
+}
+
+/** DataTableHeader **/
+.spark-DataTableHeader {
+	margin: 0;
+	/* cursor: not-allowed; */
+}
+.spark-DataTableHeader-sortable {
+	cursor: pointer;
+	cursor: hand;
+}
+.spark-DataTableHeader .spark-Anchor,
+.spark-DataTableHeader-Label{
+	color: #111111;
+}
+.spark-DataTableHeader-label {
+	font-weight: bold;
+    font-size: 9pt;
+	background: none !important;
+}
+.spark-DataTableHeader-label-hover {
+	color: #777777;
+}
+/** Sort icons **/
+.spark-DataTableHeader .spark-DoubleIcon .spark-Icon {
+	height: 7px;
+	line-height: 7px;
+	font-size: 7px;
+}
+
+/** CheckBoxes **/
+.spark-TableComponent-columnHeader>.gwt-CheckBox>label,
+.spark-TableComponent-row>td:first-child .gwt-CheckBox>label {
+	/* hide check box label */
+	display: none;
+}
+.spark-TableComponent-columnHeader>.gwt-CheckBox {
+	margin-left: 2px;
+}
+
+/** TableComponent **/
+.spark-TableComponent {
+	width: 100%;
+    border-spacing: 1px;
+}
+.spark-TableComponent .spark-TableComponent-queryInput,
+.spark-TableComponent .spark-TableComponent-cell {
+	padding: 0px 2px 0px 2px;
+}
+
+td.spark-TableComponent-queryInput:last-child {
+    padding-right: 0px !important;
+}
+.spark-TableComponent-paddingFix {
+}
+@if user.agent ie6 ie8 { /* fix this */
+	.spark-TableComponent-paddingFix {
+		padding-right: 7px !important;
+	}
+}
+td.spark-TableComponent-cell.spark-TableComponent-cell-noBorderTop {
+	border-top: 1px solid transparent;
+}
+td.spark-TableComponent-cell.spark-TableComponent-cell-noBorderBottom {
+	border-bottom: none;
+}
+td.spark-TableComponent-cell.spark-TableComponent-cell-marked {
+	font-weight: bold;
+}
+.spark-TableComponent-headerRow * {
+	vertical-align: middle;
+}
+.spark-DataTableHeader {
+	width: 100%;
+}
+.spark-TableComponent .spark-TableComponent-columnHeader td {
+   border-bottom: none !important;
+}
+td.spark-TableComponent-columnHeader {
+    border: none !important;
+    padding: 3px;
+}
+.spark-TableComponent-queryInput {
+    vertical-align: top;
+    padding-right: 5px !important;
+}
+.spark-TableComponent-queryInput-decimal {
+    text-align: right;
+}
+.spark-TableComponent-queryInput-boolean {
+	text-align: center;
+}
+.spark-TableComponent-queryInput .spark-TextField-textBox,
+.spark-TableComponent-queryInput .spark-PasswordField-textBox {
+	width: 100%;
+}
+.spark-TableComponent-queryInput .spark-ListField {
+    width: 99%;
+}
+.spark-TableComponent-row {
+    cursor: pointer;
+    cursor: hand;
+}
+.spark-TableComponent-row-noselect{
+	cursor: default;
+}
+.spark-TableComponent-rowExt {
+    cursor: default !important;
+}
+.spark-TableComponent-rowExpandedCell td {
+	border: none;
+}
+.spark-TableComponent .spark-TableComponent-rowExpanded td.spark-TableComponent-rowExpandedCell {
+	padding: 2px;
+    border-top: none;
+}
+/* (-) ------------------------------ Table Component ------------------------------ */
+/* (+) ------------------------------- Table Command ------------------------------- */
+.spark-TableCommand,
+.spark-TableCommand-current,
+.spark-TableCommand-disabled,
+.spark-TableCommand-small,
+.spark-TableCommand-current-small,
+.spark-TableCommand-disabled-small {
+	margin-left: 5px;
+	margin-right: 10px;
+}
+.spark-TableCommand-current,
+.spark-TableCommand-current-small {
+	font-weight: bold;	
+}
+.spark-TableCommand-disabled,
+.spark-TableCommand-disabled-small {
+	color: #a3a3a3;
+}
+.spark-TableCommand-small,
+.spark-TableCommand-current-small,
+.spark-TableCommand-disabled-small {
+	font-size: 8pt;
+}
+/* (-) ------------------------------- Table Command ------------------------------- */
+/* (+) ------------------------------ Paging Component ----------------------------- */
+/** HorizontalPagingComponent **/
+.spark-HorizontalPagingComponent {
+	margin: 0;
+	padding: 0.5em;
+	width: 100%;
+}
+.spark-HorizontalPagingComponent-paging-link, 
+.spark-HorizontalPagingComponent-page-size-link, 
+.spark-HorizontalPagingComponent-first-page-separator,
+.spark-HorizontalPagingComponent-last-page-separator {
+	padding-right: 1em;
+}
+.spark-HorizontalPagingComponent-page-size-link-active {
+	font-weight: bold;	
+}
+.spark-HorizontalPagingComponent-current-page {
+	font-weight: bold;
+	padding-right: 1em;
+}
+.spark-HorizontalPagingComponent-total {
+	text-align: right;
+}
+.spark-HorizontalPagingComponent-right {
+	text-align: right;
+	float: right;
+}
+
+/** ListboxPagingComponent **/
+.spark-ListboxPagingComponent {
+	float: right;	
+	margin: 2px;
+}
+.spark-ListboxPagingComponent-paging-link, 
+.spark-ListboxPagingComponent-page-size-link,
+.spark-ListboxPagingComponent-total {
+	padding-right: 1em;
+}
+.spark-ListboxPagingComponent select {
+	width: 9em;
+	margin-right: 1em;
+}
+.spark-ListboxPagingComponent-page-size-link-active {
+	font-weight: bold;		
+}
+/* (-) ------------------------------ Paging Component ----------------------------- */
+/* (+) ----------------------------------- Cell ------------------------------------ */
+.spark-DecimalCell {
+	text-align: right;
+	white-space: nowrap;
+}
+.spark-LongCell {
+	white-space: nowrap;
+}
+/* (-) ----------------------------------- Cell ------------------------------------ */
+/* (+) ---------------------------- Simple Column Header --------------------------- */
+.spark-SimpleColumnHeader * {
+	width: 100%;
+}
+td.spark-SimpleColumnHeader, 
+.spark-SimpleColumnHeader > table {
+	height: 100%;
+}
+.spark-SimpleColumnHeader-sortButton {
+	width: 18;
+	height: 18;
+	padding: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;	
+}
+.spark-SimpleColumnHeader-sortButton[disabled] {
+	background-color: #a0a0a0;
+}
+.spark-SimpleColumnHeader-sortButton-asc {
+	background-image: url('../img/sort_asc.png'); 
+}
+.spark-SimpleColumnHeader-sortButton-desc {
+	background-image: url('../img/sort_desc.png');
+}
+.spark-SimpleColumnHeader-label {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 0.5em;
+}
+/* (-) ---------------------------- Simple Column Header --------------------------- */
+/* (+) ------------------------------- Modal Widgets ------------------------------- */
+.spark-ModalWidget {
+	background-color: #ffffff;
+    filter: alpha('opacity = 60');
+    opacity: 0.6;
+    z-index: 32000;
+}
+
+/** SuggestBoxPopup **/
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner,
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner,
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner,
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+    width: 1px;
+    height: 1px;
+}
+.gwt-SuggestBoxPopup .item-selected {
+	background-color: #d1ddf6;
+}
+.suggestPopupContent {
+    background-color: #f9fbfb !important;
+}
+
+/** AppendingSuggestBox **/
+.sparkAppendingSuggestBox {
+  padding: 2px;
+}
+.sparkAppendingSuggestBoxPopup {
+  margin-left: 3px;
+}
+.sparkAppendingSuggestBoxPopup .item-selected {
+  background: #b7d6f6;
+}
+.sparkAppendingSuggestBoxPopup .suggestPopupContent {
+  background: white;
+}
+.sparkAppendingSuggestBoxPopup .suggestPopupTopCenter,
+.sparkAppendingSuggestBoxPopup .suggestPopupBottomCenter,
+.sparkAppendingSuggestBoxPopup .suggestPopupMiddleLeft,
+.sparkAppendingSuggestBoxPopup .suggestPopupMiddleRight {
+  background-color: #b7d6f6;
+}
+
+.sparkAppendingSuggestBoxPopup .suggestPopupTopLeft,
+.sparkAppendingSuggestBoxPopup .suggestPopupTopRight,
+.sparkAppendingSuggestBoxPopup .suggestPopupBottomLeft,
+.sparkAppendingSuggestBoxPopup .suggestPopupBottomRight {
+  border: 1px solid #b7d6f6;
+}
+
+/** DialogBox **/
+.gwt-DialogBox .dialogTopLeftInner,
+.gwt-DialogBox .dialogTopRightInner,
+.gwt-DialogBox .dialogBottomLeftInner,
+.gwt-DialogBox .dialogBottomRightInner {
+    width: 0px;
+    height: 0px;
+}
+.gwt-DialogBox .dialogTopLeft,
+.gwt-DialogBox .dialogTopRight,
+.gwt-DialogBox .dialogMiddleLeft,
+.gwt-DialogBox .dialogMiddleRight,
+.gwt-DialogBox .dialogBottomLeft,
+.gwt-DialogBox .dialogBottomRight,
+.gwt-DialogBox .dialogBottomCenter {
+    background: none;
+}
+
+/** ValidationErrorPopup **/
+.spark-ValidationErrorPopup {
+	color: red;
+	background-color: #FFFAA0;
+	border: 1px #FFEAA0 solid;
+	padding: 7px;
+}
+
+/** ScreenDisablerPopup **/
+.spark-loading {
+	/* background-color: #fff; */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/loading2.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.7;
+	z-index: 100;
+}
+.spark-ScreenDisablerPopup {
+	padding: 0;
+	border: none;
+	background-image: url('../img/loading.gif');
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+/** Help Pop-up **/
+.spark-HelpPopup {
+	width: 300px;
+	border: none;
+	background: #fffff0;
+	border: 1px solid #f0f0f0;
+	filter: none;
+	padding: 5px;
+}
+
+/** ProgressBar **/
+.spark-ProgressBar {
+    height:20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(200,200,200);
+    border: 1px solid rgb(180,180,180);
+    text-align: center;
+    background-image: url('../img/progressBarGradient.png');
+    background-repeat: no-repeat;
+}
+.spark-ProgressBar * {
+    vertical-align:middle;
+    line-height:20px;
+}
+
+/** ProcessIndicator **/
+.spark-ProcessIndicator {
+	background-color: #ffffff;
+	border: solid 1px #bbbbbb;
+	padding: 6px;
+    z-index: 32100;
+}
+.spark-ProcessIndicator-icon {
+	background-position: center;
+	background-image: url('../img/ajax-loader02.gif');
+	background-repeat: no-repeat;
+}
+.spark-ProcessIndicator-label {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #222222;
+}
+.spark-ProcessIndicator-task {
+	font-size: 8pt;
+	color: #888888;
+	padding-top: 10px;
+}
+.spark-ProgressIndicator {
+	background-color: #ffffff;
+	border: 1px solid #a8a8a8;	
+	width: 120px;
+}
+@url imgAjaxLoader04 imgAjaxLoader04;
+.spark-ProgressIndicator-icon {	
+	width: 20px;
+	height: 20px;
+	background: imgAjaxLoader04 no-repeat center;
+}
+.spark-ProgressIndicator-text {
+	font-size: 8pt;
+	color: #666666;
+	padding-left: 3px;
+	padding-right: 5px;
+	
+	cursor: pointer;
+	cursor: hand;
+}
+.spark-ProgressIndicator-progress {
+	background-color: #ff8e5d;
+	margin: 1 0 0 0;
+	height: 3px;
+	overflow: hidden;
+}
+.spark-ProgressIndicator-toolbar {
+	background-color: #e8e8e8;
+	font-size: 7pt;
+	margin: 1 0 0 0;	
+	height: 12px;
+	overflow: hidden;
+}
+.spark-ProgressIndicator-toolbar-text {
+	text-align: center;
+	color: #757575;
+	cursor: pointer;
+	cursor: hand;
+}
+.spark-ProgressIndicator-toolbar-text-hover {
+	color: #a82f2f;
+}
+
+/** Info dialog **/
+.spark-InfoPanel {
+	overflow: hidden;
+	zIndex: 30000;
+	background-color:#FFFFE1;
+	border:1px solid black;
+}
+.spark-InfoPanel-caption {
+	font-weight: bold;
+	display: block;
+}
+
+/** DropDown **/
+.spark-DropdownButton.selected {
+	background-color: #f0f0f0;
+	background-image: none;
+}
+.spark-DropdownButtonPopup {
+	border: 1px solid #e0e0e0;
+	-moz-box-shadow: 0 4px 10px #8B8B8B;
+	box-shadow: 0 4px 10px #8B8B8B;
+	background-color: #fcfcfc;
+}
+.spark-DropdownButtonItem {
+	color: #000000;
+	white-space: nowrap;
+	text-decoration: none;
+	padding: 5px 5px 5px 8px;
+	display: block;
+}
+.spark-DropdownButtonItem:hover {
+	background-color: #d3def6;
+	color: #000000;
+	text-decoration: none;
+}
+
+button.spark-DropdownListBox.spark-Field-textBox {
+	background-color: #ffffff;
+	border: 1px solid #ececec;
+	border-top: 1px solid #b6b6b6;
+	text-align: center;
+}
+/** images **/
+.spark-SuggestBoxPopup .item img,
+.spark-DropdownButtonPopup .spark-DropdownButtonItem img {
+    vertical-align: middle;
+	margin-top: -2px;
+	padding-right: 5px;
+    /* IE border fix */
+    border: none; 
+}
+/* (-) ------------------------------- Modal Widgets ------------------------------- */
+/* (+) ------------------------------- Info Button --------------------------------- */
+.spark-InfoButton {
+	margin-left: 2px;
+	cursor: pointer;
+}
+
+.spark-InfoPopup {
+	background-color: #e0e0e0;
+	padding: 5px;
+	padding-bottom: 12px;		
+}
+
+.spark-InfoPopup .dialogTopCenterInner {
+	padding: 0px;
+}
+
+.spark-InfoPopup .Caption {
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 10px;
+	display: block;
+}
+.spark-InfoPopup .Caption .spark-Anchor,
+.spark-InfoPopup .Caption>tbody {
+	float: right;
+}
+.spark-InfoPopup .dialogContent {
+	padding-right: 10px;
+}
+/* (-) ------------------------------- Info Button --------------------------------- */
+/* (+) ------------------------------- Message panel ------------------------------- */
+.spark-MessagePanel-floating {
+	position: fixed;
+	z-index: 2;
+	max-width: 1000px;
+	width: 70%;
+	top: 12px;
+}
+.spark-MessagePanel,
+.spark-MessagePanel td {
+	color: #000000;	
+	font-size: 14px;
+	font-family: Arial;
+}
+
+.spark-MessagePanel textarea {
+	resize: vertical;
+}
+
+div.spark-msg-groups>div {
+	margin-bottom: 3px;
+}
+.spark-MessagePanelPane {
+	position: relative;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.spark-MessagePanel-floating .spark-MessagePanelPane {
+	box-shadow: 3px 3px 16px -6px #313131;
+	-moz-box-shadow: 3px 3px 16px -6px #313131;
+	-webkit-box-shadow: 3px 3px 16px -6px #313131;
+}
+.spark-MessagePanel-link {
+	cursor: pointer;
+	font-weight: normal;
+	text-decoration: underline !important;
+}
+.spark-MessagePanel-details {
+	margin-top: 2px;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: 8pt;
+	width: 98%;
+	border: 1px solid #777777;
+	background-color: #f9f6a0;
+}
+.spark-MessagePanel table {
+	border-collapse: collapse;
+}
+.spark-msg-panel-close {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	width: 19px;
+	height: 17px;
+}
+.spark-msg-panel-close .spark-Icon {
+	vertical-align: top;
+	padding-left: 5px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.spark-msg-panel-caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 17px;
+}
+.spark-msg-panel-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 17px;
+	height: 15px;
+	background-color: inherit;
+}
+.spark-msg-panel-body {
+	/* width: 100%; */
+}
+.spark-msg-panel-body.spark-msg-panel-resizeable {
+	resize: vertical;
+}
+.spark-msg-panel-body>div{
+	height: 100%;
+}
+.fieldInMsg {
+	font-weight:bold;
+}
+table.spark-msg-group {
+	/* border-radius: 4px; */
+	float:left;
+	clear:both;
+	border-collapse:separate;
+	border-spacing:0;
+	width:100%;
+	height:100%;
+	border-width: 1px;
+	border-style: solid;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 8px;
+	padding-bottom: 15px;
+	border-bottom-color: transparent !important;
+}
+table.spark-msg-group a {
+	text-decoration: none;
+}
+table.spark-msg-group a:hover {
+	text-decoration: underline;
+}
+table.spark-msg-group tr, table.spark-msg-group td {
+	border: 0px solid none;
+}
+table.spark-msg-group td {
+	height:22px;
+}
+table.spark-msg-group table {
+	width:100%;
+}
+table.spark-msg-group table td {
+	height:auto;
+}
+.spark-msg-panel-rIcn, .spark-msg-panel-frstRIcn {
+	display:none;
+}
+.spark-msg-groups .spark-msg-group td,
+.spark-msg-groups .spark-msg-group td div,
+.spark-msg-groups .spark-msg-group td a,
+.spark-msg-groups .spark-msg-group td a:hover, 
+.spark-msg-groups .spark-msg-group div a,
+.spark-msg-groups .spark-msg-group div a:hover, 
+.spark-msg-groups .spark-msg-panel-caption,
+.spark-msg-groups .spark-msg-panel-close {
+	color: inherit;
+	background-color: inherit;
+	border-color: inherit;
+}
+.spark-msg-groups .spark-msg-panel-close,
+.spark-msg-groups .spark-msg-panel-close .spark-Icon {
+	color: inherit !important;
+}
+.spark-msg-group-0,
+.spark-msg-group-0 .spark-msg-group {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+.spark-msg-group-1,
+.spark-msg-group-1 .spark-msg-group {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+.spark-msg-group-2,
+.spark-msg-group-2 .spark-msg-group {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+.spark-msg-group-3,
+.spark-msg-group-3 .spark-msg-group {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.spark-msg-group-0-field {
+	border: 1px solid #bce8f1;
+}
+.spark-msg-group-1-field {
+	border: 1px solid #faebcc;
+}
+.spark-msg-group-2-field.spark-msg-panel-activeField .spark-SuggestField,
+.spark-SuggestField.spark-msg-group-2-field.spark-msg-panel-activeField,
+.spark-DateField.spark-msg-group-2-field.spark-msg-panel-activeField,
+.spark-RadioField.spark-msg-group-2-field.spark-msg-panel-activeField,
+.spark-ListField.spark-msg-group-2-field.spark-msg-panel-activeField,
+.spark-Field-textBox.spark-msg-group-2-field.spark-msg-panel-activeField,
+input.spark-Field.spark-msg-group-2-field.spark-msg-panel-activeField,
+select.spark-Field.spark-msg-group-2-field.spark-msg-panel-activeField,
+input.spark-Field.spark-msg-group-2-field.spark-msg-panel-activeField {
+	border: 1px solid #a94442;
+}
+.spark-msg-group-2-field .spark-SuggestField,
+.spark-SuggestField.spark-msg-group-2-field,
+.spark-DateField.spark-msg-group-2-field,
+.spark-RadioField.spark-msg-group-2-field,
+.spark-ListField.spark-msg-group-2-field,
+.spark-Field-textBox.spark-msg-group-2-field,
+input.spark-Field.spark-msg-group-2-field,
+select.spark-Field.spark-msg-group-2-field,
+input.spark-Field.spark-msg-group-2-field {
+	border: 1px solid #dca7ae;
+}
+.spark-msg-group-3-field {
+	border: 1px solid #d6e9c6;
+}
+/* (-) ------------------------------- Message panel ------------------------------- */
+/* (+) --------------------------------- Tool Tip ---------------------------------- */
+.spark-ToolTip {
+	/* corners and background colors are defined in java side */	
+}
+.spark-ToolTip-title {		
+	margin-left: 3px;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #000000;
+}
+.spark-ToolTip-title-dragable {
+	cursor: move;
+}
+.spark-ToolTip-text {
+	font-size: 8pt;
+	color: #000000;
+	margin: 1px 3px 1px 3px; 
+}
+.spark-ToolTip-button {
+	margin-right: 2px;
+	background: url('../img/button-close.gif') no-repeat 0px -20px;
+	width: 10px;
+	height: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	cursor: hand;
+	opacity: 0.7;
+	filter: alpha('opacity = 70');	
+}
+.spark-ToolTip-button-hover {
+	opacity: 1.0;
+	filter: alpha('opacity = 100');
+}
+.spark-ToolTip-icon,
+.spark-ToolTip-icon-information,
+.spark-ToolTip-icon-warning,
+.spark-ToolTip-icon-error,
+.spark-ToolTip-icon-success,
+.spark-ToolTip-icon-fail,
+.spark-ToolTip-icon-unavailable,
+.spark-ToolTip-icon-systemError {
+	margin-left: 3px;
+	margin-right: 5px;
+	width: 24px;
+	height: 24px;	
+}
+.spark-ToolTip-icon-information {
+	background: url('../img/msgbox_icons_info.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-information-small {
+	background: url('../img/msgbox_icons_info_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+.spark-ToolTip-icon-warning {
+	background: url('../img/msgbox_icons_warning.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-warning-small {
+	background: url('../img/msgbox_icons_warning_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+.spark-ToolTip-icon-error {
+	background: url('../img/msgbox_icons_error.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-error-small {
+	background: url('../img/msgbox_icons_error_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+.spark-ToolTip-icon-success {
+	background: url('../img/msgbox_icons_success.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-success-small {
+	background: url('../img/msgbox_icons_success_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+.spark-ToolTip-icon-fail {
+	background: url('../img/msgbox_icons_fail.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-fail-small {
+	background: url('../img/msgbox_icons_fail_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+.spark-ToolTip-icon-unavailable {
+	background: url('../img/msgbox_icons_unavailable.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-unavailable-small {
+	background: url('../img/msgbox_icons_unavailable_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+.spark-ToolTip-icon-systemError {
+	background: url('../img/msgbox_icons_error.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.spark-ToolTip-icon-systemError-small {
+	background: url('../img/msgbox_icons_error_small.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);	
+	height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+/* (-) --------------------------------- Tool Tip ---------------------------------- */
+/* (+) --------------------------------- Info Box ---------------------------------- */
+.infoBox-label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.infoBox-box {width:300px;}
+.infoBox-box b, 
+.infoBox-box .info-h, 
+.infoBox-box .info-b {
+    background:rgb(254, 150, 0); 
+    border:1px solid rgb(254, 150, 0);
+    border-top:0;
+    border-bottom:0;    
+}
+.info-b1, .info-b2, .info-b3, .info-b4{font-size:1px;overflow:hidden;display:block;}
+.info-b1 {height:1px;margin:0 5px;}
+.info-b2 {height:1px;border-right:2px;border-left:2px;border-top:0;border-bottom:0;margin:0 3px;}
+.info-b3 {height:1px;border-right:1px;border-left:1px;border-top:0;border-bottom:0;margin:0 2px;}
+.info-b4 {height:2px;border-right:1px;border-left:1px;border-top:0;border-bottom:0;margin:0 1px;}
+.info-h {border-right:1px;border-left:1px;border-top:0;border-bottom:0;width:100%;color:white;}
+.info-b {border-right:1px;border-left:1px;border-top:0;border-bottom:0;width:100%;color:white;}
+.info-h div {margin: 0 10 0 10;padding-bottom:3px;font:1.2em;font-weight:bold;}
+.info-b div {margin: 0 8 0 8;padding-top:5px;font:0.9em;border-top:2px solid white;}
+.info-h2 {width:16px;height:16px;background:url('../img/cancel.png') top left no-repeat;cursor:pointer;}
+/* (-) --------------------------------- Info Box ---------------------------------- */
+/* (+) --------------------------------- Calendar ---------------------------------- */
+/** calendar panel styles */
+.advanced-Calendar {
+	background-color: #e9e9e9;
+    padding: 2px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 3px 10px 0px #5f5f5f;
+    -webkit-box-shadow: 2px 3px 10px 0px #5f5f5f;
+    -moz-box-shadow: 2px 3px 10px 0px #5f5f5f;
+}
+
+/** calendar layout flex table styles */
+.advanced-Calendar .layout-table {
+    font-family: sans-serif;
+    font-size: 10px;
+    cursor: default;
+    padding: 0;
+    border-collapse: collapse;
+    width: 200px;
+}
+
+/** layout cells styles */
+.advanced-Calendar .layout-table td {
+    vertical-align: middle;
+    padding: 1px;
+    font-size: 10px;
+}
+
+/** header cell styles */
+.advanced-Calendar .header-cell {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 1px 1px 1px 1px;
+}
+
+/** button cell styles */
+.advanced-Calendar .switch-cell {
+    width: 17px;
+    text-align: center;
+}
+
+.advanced-Calendar .chooseTime-cell {
+	/* padding-left: 5px !important; */
+}
+
+/** today button cell styles */
+.advanced-Calendar .today-button-cell {
+    /* width: 179px; */
+    text-align: center;
+}
+
+.advanced-Calendar .years-cell {
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 30px;
+    height: 16px;
+    margin-left: 5px;
+    text-align: center;
+    padding: 0px;
+}
+
+.advanced-Calendar .months-cell {
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 77px;
+    height: 18px;
+    text-align: center;
+    padding: 0px;
+}
+
+/** small button styles */
+.advanced-Calendar .switch-button {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: black;
+    padding: 1px 1px 1px 1px;
+    /*background-color: gainsboro;
+    border: 1px solid darkgray;*/
+    cursor: pointer;
+    width: 18px;
+}
+
+/** today button styles */
+.advanced-Calendar .today-button {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #5e5e5e;
+    padding: 1px 1px 1px 1px;
+    /*background-color: gainsboro;
+    border: 1px solid darkgray;*/
+    cursor: pointer;
+    /* width: 179px; */
+}
+
+.advanced-Calendar .today-button:HOVER {
+    color: #3b3b3b;
+}
+
+/** close button styles */
+.advanced-Calendar .close-button {
+	margin-top: 2px;
+	opacity: 0.6;
+    filter: alpha('opacity = 60');
+    cursor: pointer;
+}
+
+.advanced-Calendar .close-button:hover {
+    opacity: 1;
+    filter: alpha('opacity = 100');
+}
+
+/** step buttons styles */
+.advanced-Calendar .next-year-button {
+    background: url('../img/next_right2.png');
+    margin-right: 2px;
+}
+
+.advanced-Calendar .next-month-button {
+	background: url('../img/next_right.png');
+    background: imgNext;
+}
+
+.advanced-Calendar .previous-year-button {
+    background: url('../img/previous_left2.png');
+    margin-left: 2px;
+}
+
+.advanced-Calendar .previous-month-button {
+    background: url('../img/previous_left.png');
+}
+
+.advanced-Calendar .step-button{
+    background-position: 0px;
+    background-repeat: no-repeat;
+    height: 12px;
+    cursor: pointer;
+}
+
+.advanced-Calendar .step-button:HOVER {
+    background-position: -16px;
+}
+
+/** choose time button styles */
+.advanced-Calendar .chooseTime-button {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #5e5e5e;
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 1px 1px 1px 1px;
+    cursor: pointer;
+    width: 46px;
+}
+
+.advanced-Calendar .chooseTime-button:HOVER {
+    border: 1px solid #7e7e7e;
+}
+
+/** days flex table styles */
+.advanced-Calendar .days-table {
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 100%;
+    padding: 1px;
+    border-collapse: collapse;
+}
+
+/** week days header cell styles */
+.advanced-Calendar .week-day-cell {
+    background-color: gainsboro;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 9px;
+    width: 14%;
+}
+
+/** week number column cell styles */
+.advanced-Calendar .week-number-cell {
+    background-color: gainsboro;
+    text-align: right;
+    vertical-align: middle;
+    width: 0;
+}
+
+/** day cell styles */
+.advanced-Calendar .day-cell,
+.advanced-Calendar .disabled-day-cell {
+    text-align: right;
+    vertical-align: middle;
+    color: black;
+    cursor: pointer;
+    border: 1px solid #f0f0f0;
+    padding: 0px;
+}
+.advanced-Calendar .disabled-day-cell {
+    background-color: #fafafa;
+}
+
+.advanced-Calendar .day-cell {
+    background-color: #ffffff;
+}
+.advanced-Calendar .out-of-bounds-day-cell {
+    text-align: right;
+    vertical-align: middle;
+    color: black;
+    background-color: lightgray;
+    cursor: default;
+}
+.advanced-Calendar .day-cell:hover,
+.advanced-Calendar .disabled-day-cell:hover {
+	background: none repeat scroll 0 0 #D5FCFF;
+}
+.advanced-Calendar .day-cell:hover {
+    outline: 1px inset #ffffff;
+    outline-offset: -1px;
+}
+
+/** today cell styles */
+.advanced-Calendar .today-cell {
+    outline: 1px dashed #00b8c0 !important;
+    outline-offset: -1px;
+}
+
+/** selected day styles */
+.advanced-Calendar .selected-day-cell {
+    background-color: #7cd0ff;
+    outline-offset: -1px;
+    outline: 1px inset #6BDBFF !important;
+    cursor: default;
+    /* aaa-font-weight: bold; */
+    /* aaa-border: 1px solid #99ccff; */
+}
+
+/** holiday cell styles */
+.advanced-Calendar .holiday-cell {
+    color: red;
+}
+
+/** neighbour month day cell styles */
+.advanced-Calendar .disabled-day-cell {
+    text-align: right;
+    vertical-align: middle;
+    color: darkgray;
+}
+
+/** time cell styles */
+.advanced-Calendar .time-cell {
+    aaa-text-align: center;
+    border-collapse: collapse;
+}
+
+/** time table styles */
+.advanced-Calendar .time-table {
+	width: 100%;
+    font-family: sans-serif;
+    font-size: 10px;
+    padding: 0;
+    border-collapse: collapse;
+    aaa-display: inline;
+}
+
+/** select box of the time section styles */
+.advanced-Calendar .time-select {
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 45px;
+    border: 1px solid darkgray;
+}
+
+/** date picker component styles */
+.advanced-DatePicker {
+	border: none !important;
+    padding: 0px !important;
+}
+/* (-) --------------------------------- Calendar ---------------------------------- */
+/* (+) -------------------------------- Stack Page --------------------------------- */
+.stack {
+	width: 100%;
+	border-width: 1;
+	border-style: solid;
+}
+.stack-expcol {
+	border: 0;
+	padding: 2 2 2 3;
+}
+.stack-page {
+	width: 100%;
+}
+.stack-page-head {
+	padding: 3px;
+    background: url('../img/bg02.png') repeat-x 0px -150px;
+	width: 100%;
+	cursor: pointer;
+}
+.stack-page-head-expanded {
+}
+.stack-page-head-collapsed {
+}
+.stack-page-head-front {
+}
+.stack-page-head-front2 {
+}
+.stack-page-head-a {
+	width: 100%;
+	text-align: left;
+	font: arial;
+	color: rgb(19, 54, 138);
+	font-size: 1.5em;
+	white-space: nowrap;
+}
+
+.stack-page-head-b {
+}
+.stack-page-head-expand-img {
+	padding: 2 2 2 5;
+	vertical-align: middle;
+	width: 12px;
+	height: 13px;
+	background: url('../img/expand.png') center no-repeat;
+	cursor: pointer;
+}
+.stack-page-head-expand {
+	padding: 2 3 2 3;
+	font: arial;
+	color: rgb(19, 54, 138);
+	font-size: 0.9em;
+	cursor: pointer;
+}
+.stack-page-head-collapse-img {
+	padding: 2 2 2 5;
+	vertical-align: middle;
+	width: 12px;
+	height: 13px;
+	background: url('../img/collapse.png') center no-repeat;
+	cursor: pointer;
+}
+.stack-page-head-collapse {
+	padding: 2 3 2 3;
+	font: arial;
+	color: rgb(19, 54, 138);
+	font-size: 0.9em;
+	cursor: pointer;
+}
+.stack-page-body {
+	width: 100%;
+    border-right: 1px solid #d3def6;
+    border-left: 1px solid #d3def6;
+    border-bottom: 1px solid #d3def6;
+}
+/* (-) -------------------------------- Stack Page --------------------------------- */
+/* (+) -------------------------------- Message Icon ------------------------------- */ 
+.spark-MessageIcon {
+	cursor: pointer;
+}
+.spark-MessageIcon-counter {
+	display: inline-block;
+	color: #fff;
+	font-size: 11px;
+	line-height: 10px;
+	margin-top: 0px;
+	margin-left: -8px;
+	padding: 0 2px;
+	vertical-align: top;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.spark-MessageIcon .spark-Icon {
+	font-size: 17px;
+	height: 24px;
+}
+.spark-MessageIcon .spark-MessageIcon-counter {
+	filter: alpha('opacity = 90');
+    opacity: 0.9;
+}
+.spark-MessageIcon:hover .spark-MessageIcon-counter {
+	filter: alpha('opacity = 100');
+    opacity: 1;
+}
+/* (-) -------------------------------- Message Icon ------------------------------- */ 
+/* (+) -------------------------------- Wizard Panel ------------------------------- */ 
+.spark-WizardPanel .gwt-TabPanelBottom {
+	background: none;
+	border: none;
+}
+
+.spark-WizardPanel .gwt-TabBar .gwt-TabBarItem {
+	background: none;
+	font-weight: normal;
+	outline: 0;
+}
+/* (-) -------------------------------- Wizard Panel ------------------------------- */ 

@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.UserEmotionsService
+path: 5ABB33D520E366FC09DBF37FEAC9E8BA.gwt.rpc

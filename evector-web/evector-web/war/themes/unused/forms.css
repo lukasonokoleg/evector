@@ -1,0 +1,384 @@
+﻿/* Stiliaus failas NK10 formoms */
+#form-fields
+{
+    position: relative;
+    margin-bottom: 20px;
+}
+#form-fields  label {
+    font-weight: bold;
+}
+#form-fields  label.radio {
+    font-weight: normal;
+}
+/*wizard styles*/
+.wizard-head
+{
+    margin-bottom: 10px;
+}
+.wizard-head td
+{
+    font-size: 1.4em;
+    padding: 0.3em 0.83em;
+    width: auto;
+}
+.wizard-head-item-sel
+{
+    width: auto;
+}
+.wizard-head-item-sel
+{
+    border-bottom: #0065a3 1px solid;
+    border-left: #0065a3 1px solid;
+    width: 66px;
+    background: url(Images/bg.registerformnav.gif) #0065a3 repeat-x left top;
+    color: #fff;
+    border-top: #0065a3 1px solid;
+    border-right: #0065a3 3px solid;
+    text-decoration: none;
+}
+.wizard-head td span
+{
+    line-height: 32px;
+    margin-left: 15px;
+    vertical-align: top;
+}
+div.wizard-step
+{
+    text-align: left;
+}
+div.wizard-step h2
+{
+    border-bottom: 1px solid #E5E5E5;
+}
+div.wizard-step .values label
+{
+    width: auto;
+    display: inline;
+}
+.wizard-head-item-sel i
+{
+    background: url(images/sprite.wizard.gif) no-repeat 0px 0px;
+}
+.wizard-head-item-sel i
+{
+    bottom: -15px;
+    position: relative;
+    display: block;
+    width: 100%;
+    background-position: center -41px;
+    float: left;
+    height: 9px;
+    overflow: hidden;
+    left: 0px;
+}
+.no-b-line
+{
+    border-bottom: 1px solid transparent;
+}
+
+/*form style*/
+
+table.table-form
+{
+    border-style: None;
+    border-collapse: collapse;
+    overflow: visible;
+}
+
+
+
+table.table-form td.no-border
+{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    height: 0px;
+}
+table.table-form td.columnfix
+{
+    width: 185px;
+}
+.table-form input[type="text"]
+{
+    line-height: 22px;
+}
+
+.table-form input[type="text"].long
+{
+    width: 375px;
+}
+
+.table-form.step2 input
+{
+    width: 150px;
+}
+.table-form.step2 .inner-textbox
+{
+    text-align: left;
+    width: 100px;
+}
+
+.inner-textbox input[type="text"]
+{
+    text-align: right;
+}
+
+table.values td.noborderTable
+{
+    border-bottom: none;
+}
+
+.as_label
+{
+    border: none !important;
+    width: 100px !important;
+}
+
+
+/*step 2 stilius */
+table.table-form .textright
+{
+    text-align: right;
+}
+table.table-form .inner-textbox input
+{
+    width: 80px;
+    float: right;
+}
+.leistinojiNaudotiGalia td.inner-textbox
+{
+    width: 150px;
+    text-align: center;
+}
+.leistinojiNaudotiGalia .field-validation-error
+{
+    width: 150px;
+}
+table.table-form input.patCategoryInput
+{
+    width: 80px;
+    float: right;
+    text-align: right;
+}
+
+table.table-form .patCategoryBlock
+{
+    width: 155px;
+    margin-bottom: 10px;
+    height: 30px;
+    display: inline-table;
+
+}
+.patCategoryBlockSingle
+{
+    width: 155px;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.dark-class
+{
+    background-color: rgb(255, 253, 253);
+    filter: alpha(opacity=50); /* IE */
+    opacity: 0.5; /* Safari, Opera */
+    -moz-opacity: 0.50; /* FireFox */
+    z-index: 1000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.step2-validation-errors span
+{
+    width: 105px;
+}
+
+
+.cursor_hand
+{
+    cursor: hand;
+    cursor: pointer;
+}
+
+.as_label
+{
+    border: none !important;
+    width: 100px !important;
+}
+
+/*adreso pasirinkimo stilius */
+td table.dynamicAddress
+{
+    width: 370px;
+}
+td table.dynamicAddress td.first
+{
+    padding-left: 0px;
+}
+table.dynamicAddress td
+{
+    border-bottom: 0px none;
+}
+table.dynamicAddress input.tbSearch
+{
+    width: 350px;
+}
+.popupMenu
+{
+    position: absolute;
+    z-index: 10001;
+}
+table.dynamicAddress input.addressSmall
+{
+    width: 50px;
+}
+table.dynamicAddress label
+{
+    font-weight: normal;
+    padding: 0 0 0 0;
+}
+
+
+.backLink
+{
+    text-align: right;
+    font-weight: bold;
+    font-size: medium;
+}
+
+form textarea {
+width: 100%;
+height: 100px;
+margin: 0;
+}
+
+
+div.wizard-step .values label.radio {
+    font-weight: normal;
+    display: block;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+table.values td.fixed 
+{
+    width: 210px;
+}
+table.values td.bottom {
+    vertical-align: bottom;
+    padding-bottom: 5px;
+}
+
+div.wizard-step .values label.inline-block {
+    display: inline-block;
+}
+
+#form-fields label.checkBox {
+    font-weight: normal;
+}
+
+.patCategoryInputRO
+{
+    border: none !important;
+    width: 50px !important;
+    float: right !important;
+    text-align: right;
+}
+
+input.address {
+    cursor: hand !important;
+    cursor: pointer !important;
+    background-color: white !important;
+}
+
+.label
+{
+    text-align: right;
+    padding-right: 5px;
+    cursor: not-allowed;
+    background-color: #eeeeee;
+    line-height: 22px;
+    float: right;
+    width: 110px !important;
+    height: 27px !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    vertical-align:middle !important;
+    font-weight: normal !important; 
+}
+tr.borderless, tr.borderless td {
+    border-color: transparent !important;
+}
+tr.no_padding, tr.no_padding td {
+    padding: 0px !important;
+}
+tr.no_padding_b, tr.no_padding_b td {
+    padding-bottom: 0px !important;
+}
+
+
+
+
+/* --------------------- SuggestField -------------------------- */
+
+.spark-SuggestField {
+    padding: 0;
+}
+.spark-SuggestField-input {
+    height: 100%;
+    margin: 0;
+    border: 0 inset; /* chrome adds insets to inputs which results into margins of -2px */
+    padding: 0;
+}
+
+.spark-SuggestField-arrow {
+    width: 18px;
+    height: 100%;
+    margin: 0;
+    border: 0 inset; /* chrome adds insets to inputs which results into margins of -2px */
+    padding: 0;
+    background: url('../img/suggestArrow.png') no-repeat center right; 
+    cursor: pointer;
+}
+
+.spark-SuggestField-clear {
+    width: 18px;
+    height: 100%;
+    margin: 0;
+    border: 0 inset; /* chrome adds insets to inputs which results into margins of -2px */
+    padding: 0;
+    background: url('../img/suggestClear.png') no-repeat center right;
+    cursor: pointer;
+}
+
+.spark-SuggestField-backgroundText, 
+.spark-dateField-background, 
+input.placeholder, 
+textarea.placeholder, 
+select.placeholder, 
+option.placeholder {
+    color: #cccccc !important;
+    /*font-style: italic !important;*/
+}
+
+/* ------------------- SuggestBoxPopup ------------------------- */
+
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner,
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner,
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner,
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+    width: 1px;
+    height: 1px;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+    background-color: #d1ddf6;
+}
+
+.suggestPopupContent {
+    background-color: #f9fbfb !important;
+}
+

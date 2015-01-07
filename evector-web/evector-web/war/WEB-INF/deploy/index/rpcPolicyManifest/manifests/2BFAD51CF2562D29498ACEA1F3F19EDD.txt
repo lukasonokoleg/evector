@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.DocumentService
+path: 473217B2073FC651C40BF0D8AA7D5963.gwt.rpc

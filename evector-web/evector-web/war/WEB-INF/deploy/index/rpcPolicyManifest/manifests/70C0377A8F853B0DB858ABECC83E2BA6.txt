@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.FacebookService
+path: FCA1BA86818A8001E0BC0CA92639157D.gwt.rpc

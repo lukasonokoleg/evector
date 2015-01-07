@@ -1,0 +1,2 @@
+serviceClass: eu.itreegroup.spark.gwt.application.client.security.PrivilegesService
+path: 393AC3B365325274DBA022737B366056.gwt.rpc

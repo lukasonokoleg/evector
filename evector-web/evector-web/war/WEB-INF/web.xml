@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>vv-portal-web</display-name>
+
+	<context-param>
+		<param-name>loginUrl</param-name>
+		<param-value>/login.html?debug=true&amp;gwt.codesvr=127.0.0.1:9997</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>homeUrl</param-name>
+		<param-value>/index.html?debug=true&amp;gwt.codesvr=127.0.0.1:9997</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>univ.evector.gwt.service.EvectorFileUploadServlet</listener-class>
+	</listener>
+	<!-- <listener> <listener-class>lt.jmsys.spark.gwt.fileupload.server.FileUploadServlet</listener-class> 
+		</listener> -->
+
+
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>univ.evector.gwt.service.EvectorFileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FileDownloadServlet</servlet-name>
+		<servlet-class>univ.evector.gwt.service.EvectorFileDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileDownloadServlet</servlet-name>
+		<url-pattern>/download-inc-file</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>univ.evector.gwt.service.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RemoteLogService</servlet-name>
+		<servlet-class>lt.jmsys.spark.gwt.logging.server.RemoteLogServiceImpl</servlet-class>
+		<init-param>
+			<description>symbolMaps directory used by StackTraceDeobfuscator</description>
+			<param-name>symbolMaps</param-name>
+			<param-value>WEB-INF/deploy/{$moduleName}/symbolMaps</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RemoteLogService</servlet-name>
+		<url-pattern>/RemoteLogService</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet> <servlet-name>VvsisService</servlet-name> <servlet-class>lt.jmsys.spark.gwt.application.common.server.vvsis.service.VvsisServiceImpl</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>VvsisService</servlet-name> <url-pattern>/login/VvsisService</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>VvsisService</servlet-name> 
+		<url-pattern>/vvsis/VvsisService</url-pattern> </servlet-mapping> -->
+	<servlet>
+		<servlet-name>IndexJspServlet</servlet-name>
+		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexJspServlet</servlet-name>
+		<url-pattern>/index.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginJspServlet</servlet-name>
+		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+		<init-param>
+			<param-name>jspFile</param-name>
+			<param-value>/login.html</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginJspServlet</servlet-name>
+		<url-pattern>/login.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InternalLoginJspServlet</servlet-name>
+		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+		<init-param>
+			<param-name>jspFile</param-name>
+			<param-value>/login.html</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InternalLoginJspServlet</servlet-name>
+		<url-pattern>/internal-login.html</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SpringGwtRpcServlet</servlet-name>
+		<servlet-class>eu.itreegroup.spark.gwt.rpc.SpringGwtRpcServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SpringGwtRpcServlet</servlet-name>
+		<url-pattern>/index/rpc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EvectorFacebookServlet</servlet-name>
+		<servlet-class>univ.evector.facebook.servlet.EvectorFacebookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EvectorFacebookServlet</servlet-name>
+		<url-pattern>/facebook/login</url-pattern>
+		<url-pattern>/facebook/callback</url-pattern>
+		<url-pattern>/facebook/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicSpringGwtRpcServlet</servlet-name>
+		<servlet-class>eu.itreegroup.spark.gwt.rpc.PublicSpringGwtRpcServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicSpringGwtRpcServlet</servlet-name>
+		<url-pattern>/login/rpc</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>LoginService</servlet-name>
+		<servlet-class>eu.itreegroup.spark.gwt.rpc.SpringGwtRpcServlet</servlet-class>
+		<init-param>
+			<param-name>service-class</param-name>
+			<param-value>univ.evector.gwt.client.service.LoginService</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginService</servlet-name>
+		<url-pattern>/login/LoginService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginService</servlet-name>
+		<url-pattern>/index/LoginService</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<!-- <servlet> <servlet-name>jaxws-servlet</servlet-name> <servlet-class>com.sun.xml.ws.transport.http.servlet.WSSpringServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>jaxws-servlet</servlet-name> <url-pattern>/public-service/ws/*</url-pattern> 
+		</servlet-mapping> -->
+
+
+
+	<servlet>
+		<servlet-name>SessionService</servlet-name>
+		<servlet-class>eu.itreegroup.spark.gwt.rpc.SpringGwtRpcServlet</servlet-class>
+		<init-param>
+			<param-name>service-class</param-name>
+			<param-value>lt.jmsys.spark.gwt.application.client.common.service.SessionService</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SessionService</servlet-name>
+		<url-pattern>/index/SessionService</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<description>
+        URLs matched by pattern in parameter 'skip' pass through filter.
+        Role is obtained from session.
+            If the role matches one of roles in parameter 'subcontexts' then it's pattern is used.
+                If URL matches role's pattern then it passes through filter.
+                If URL does not match role's pattern then:
+		            If URL matches 'relogin' pattern and request is not a GWT service call (does not have 'X-GWT-Permutation' header) 
+		            then redirect to 'loginUrl' is performed, otherwise 401-Unauthorised response is returned.
+            Otherwise it's malconfiguration of this filter - return 401-Unauthorised response and log error. 
+        If there is no role in session then:
+            If URL matches 'relogin' pattern and request is not a GWT service call (does not have 'X-GWT-Permutation' header) 
+            then redirect to 'loginUrl' is performed, otherwise 401-Unauthorised response is returned.
+        </description>
+		<filter-name>EvectorRoleFilter</filter-name>
+		<filter-class>univ.evector.filter.EvectorRoleFilter</filter-class>
+		<init-param>
+			<description>URL patterns accessible with no restrictions</description>
+			<param-name>skip</param-name>
+			<param-value>(/login\.html)|(/login/.+)|(/public-service/.+)|(/error\.html)|(/facebook/.+)||(/index/.+)|(/logout)|(/index/LoginService)|(/img/.+)|(/images/.+)|(/.+\.css)|(/.+\.js)|(/error/.+)|/RemoteLogService|/themes/.+</param-value>
+		</init-param>
+		<init-param>
+			<description>
+                URL patterns allowed only for specific roles.
+                Entries for roles are separated by token ';;;'.
+                Entry for role consists of role name and role pattern. These two are separated by token ':::';
+            </description>
+			<param-name>subcontexts</param-name>
+			<param-value>MOCK_ROLE:::(.+);;;</param-value>
+		</init-param>
+		<init-param>
+			<description>
+                URL patterns that may result in redirect to Login page if current role is incorrect or not present.
+            </description>
+			<param-name>relogin</param-name>
+			<param-value>(.*)</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EvectorRoleFilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>CacheFilter</filter-name>
+		<filter-class>lt.jmsys.spark.gwt.application.common.server.filter.NoCacheFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>BrowserCompatibilityFilter</filter-name>
+		<filter-class>lt.jmsys.spark.gwt.application.common.server.filter.BrowserCompatibilityFilter</filter-class>
+		<init-param>
+			<param-name>errorPage</param-name>
+			<param-value>error/unsupportedBrowser.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>BrowserCompatibilityFilter</filter-name>
+		<url-pattern>/index.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BrowserCompatibilityFilter</filter-name>
+		<url-pattern>/login.html</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>HtmlNoCacheFilter</filter-name>
+		<filter-class>lt.jmsys.spark.gwt.application.common.server.filter.NoCacheFilter</filter-class>
+		<init-param>
+			<param-name>nocachePattern</param-name>
+			<param-value>.+</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>HtmlNoCacheFilter</filter-name>
+		<url-pattern>/index.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HtmlNoCacheFilter</filter-name>
+		<url-pattern>/login.html</url-pattern>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<resource-ref>
+		<description></description>
+		<res-ref-name>jdbc/PortalDataSource</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+
+
+</web-app>

@@ -1,0 +1,415 @@
+/** 
+ * This file contains layout style properties for VVSIS components:
+ * fonts, dimensions, paddings and margins, positions
+ *
+ * Contents:
+ *  1. ------------------------------- Page Content --------------------------------
+ *  2. ------------------------------- Input Fields --------------------------------
+ *  3. ------------------------------- Label Widgets -------------------------------
+ *  4. ---------------------------------- Buttons ----------------------------------
+ *  5. ----------------------------------- Menu ------------------------------------ 
+ *  6. --------------------------------- Tab Bars ----------------------------------
+ *  7. ------------------------------- Modal Widgets -------------------------------
+ *  8. ------------------------------- Printing Rules ------------------------------
+ */
+ 
+/* (+) ------------------------------- Page Content -------------------------------- */
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Maven Pro', Arial, sans-serif !important;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+html>body {
+	height: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+input, select, textarea, option, button {
+	font-family: Arial Unicode MS, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+
+h1 {
+	font-size: 1.9em;
+	margin-top: 35px;
+	margin-bottom: 30px;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 1.6em;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	line-height: 1;	
+}
+
+h3 {
+	font-size: 1.2em;	
+}
+
+hr {
+	border-style: inset;
+	border-width: 1px;
+}
+
+a {
+	behavior: url('IE_anchorFix.htc');
+}
+
+.clear {clear: both;}
+.left {float: left;}
+.right {float: right;}
+.center {text-align: center;}
+.hidden {display: none;}
+.no-float {float: none;}
+.fluid {width: 100%;}
+.resize-x {resize: horizontal;}
+.resize-y {resize: vertical;}
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+
+.content {
+    z-index: -1;
+	height: auto;
+	min-height: 100%;
+	margin: auto;
+}
+
+.header {
+	height: 120px;
+	width: 100%;
+	display: block;
+	font-size: 12px;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+#vvPortalLogo.logo {
+	overflow: hidden;
+	position: relative;
+    display: block;
+	max-width: 980px;
+	min-width: 680px;
+	height: 110px;
+	float: center;
+	margin: auto;
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+#vvPortalLogo .loginVvPortalLogo {
+    display: block;
+    position: absolute;
+    left: 45px;
+    top: 20px;
+}
+
+.header .options {
+	position: absolute;
+	right: 45px;
+	bottom: 0px;
+}
+
+.header .options>* {
+	padding: 0px 5px 15px 5px;
+	display: inline-block;
+	font-size: 14px;
+	float: right;
+}
+
+.header .options>.userheader {
+	clear: both;
+	display: block;
+	padding-bottom: 45px;
+	width: 100%;
+}
+
+.header .options>.userheader>div {
+	float: right;
+}
+
+.header .options .userheader .gwt-Label {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.header .options>.logout .spark-Icon {
+	margin-top: -1px;
+}
+
+.main {
+	min-height: 100%;
+	height: auto;
+    display: block;
+	max-width: 980px;
+	min-width: 680px;
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+.pageContainer {
+	margin: 0 auto;
+	height: auto;
+	min-height: 100%;
+	overflow: hidden;
+	display: block;
+	max-width: 980px;
+	float: center;
+	padding: 110px 20px 50px 20px;
+}
+
+.pageContentContainer {
+    clear: both;
+    display: block;
+    float: none;
+    min-height: 100%;
+    position: static;
+}
+
+.pageFooter {
+	overflow: hidden;
+	display: block;
+	max-width: 960px;
+	min-width: 610px;
+	float: center;
+	margin: auto;
+    clear: both;
+    height: 60px;
+	padding: 5px 25px 15px 25px;
+}
+
+.pageFooter table {
+	width: 100%;
+}
+
+.pageFooter table td {
+	/* padding: 0px */
+}
+
+.pageFooter .copyright{
+    padding-top: 0px;
+    font-size: 12px;
+}
+
+.pageFooter .version-number {
+	text-align: right;
+	margin: 0px;
+	white-space: nowrap;
+	font-size: 13px;
+	padding-left: 20px;
+}
+
+.pageFooter .spark-Anchor {
+	padding-left: 20px;
+}
+
+::-ms-clear {
+	display: none;
+}
+
+.hint {
+	clear: left;
+	font-size: 10px;
+	line-height: 10px;
+	margin-top: -2px;
+}
+
+.formViewBodyContainer,
+.formViewBodyContainer table {
+	width: 100%;
+	max-width: 100%;
+}
+
+.formViewBodyContainer td {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.formViewBodyContainer table td {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.formBody {
+	padding: 30px 25px 25px 20px;
+}
+
+/* (-) ------------------------------- Page Content -------------------------------- */
+/* (+) ------------------------------- Input Fields -------------------------------- */
+.queryField {
+	display: inline-block;
+    height: 26px;
+    /* line-height: 18px; */
+}
+
+.queryField input.spark-Field-textBox,
+.queryField .spark-Anchor {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.queryField input.spark-Field-textBox {
+	min-width: 250px;
+}
+
+.queryField .spark-Anchor .spark-Icon {
+	padding: 4px 1px;
+	margin: 0px 5px;
+	display: inline-block;
+}
+
+.gwt-RadioButton label {
+	padding-left: 5px;
+}
+
+/* (-) ------------------------------- Input Fields -------------------------------- */
+/* (+) ------------------------------- Label Widgets ------------------------------- */
+/* (-) ------------------------------- Label Widgets ------------------------------- */
+/* (+) ---------------------------------- Buttons ---------------------------------- */
+.formViewButtonBar {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	width: auto;
+	margin: auto;
+	float: center;
+}
+
+.formViewButtonBar .spark-Button,
+.formViewButtonBar button.gwt-Button {
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+.formViewButtonBar div {
+	display: inline;
+}
+/* (-) ---------------------------------- Buttons ---------------------------------- */
+/* (+) ----------------------------------- Menu ------------------------------------ */
+.spark-MenuLevel1 table {
+	width: auto;
+}
+.spark-MenuLevel1 .spark-MenuItem {
+	padding: 6px 12px;
+}
+
+/* (-) ----------------------------------- Menu ------------------------------------ */
+/* (+) --------------------------------- Tab Bars ---------------------------------- */
+
+.gwt-TabPanelBottom {
+	padding: 10px;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarFirst,
+.gwt-DecoratedTabBar .tabTopLeftInner, 
+.gwt-DecoratedTabBar .tabTopRightInner {
+	width: 0px;
+	height: 0px;
+}
+
+.gwt-DecoratedTabBar .tabMiddleLeft, 
+.gwt-DecoratedTabBar .tabMiddleRight {
+	display: none;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem {
+	margin-right: 3px;
+	margin-left: 0px;
+	border-collapse: separate;
+	position: relative;
+	top: 1px;
+	z-index: 0;
+	height: 28px;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem .tabMiddle {
+	height: 100%;
+}
+
+.gwt-DecoratedTabBar .tabMiddleCenter {
+	padding: 5px 11px 6px 11px;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarRest {
+	display: block;
+	margin-right: 10px;
+}
+
+.tab_content {
+	position: relative;'
+}
+/* (-) --------------------------------- Tab Bars ---------------------------------- */
+/* (+) ------------------------------- Modal Widgets ------------------------------- */
+.gwt-PopupPanelGlass,
+.gwt-PopupPanel,
+.gwt-DialogBox {
+	z-index: 2;
+}
+.gwt-DialogBox {
+	max-width: 700px;
+}
+.feedbackPopup {
+	opacity: 0.9;
+}
+.feedbackPopup .gwt-Label {
+	padding: 5px;
+	font-size: 11pt;
+}
+.formPopupBody {
+	padding: 5px;
+	padding-right: 25px;
+	min-height: 100px;
+	max-height: 600px;
+	min-width: 300px;
+	max-width: 1000px;
+}
+.spark-ProcessIndicator table td {
+	padding: 0px;
+}
+.dialogTopCenterInner {
+	padding-left: 8px;
+	padding-top: 4px;
+	padding-right: 4px;
+}
+.dialogTop td,
+.dialogMiddle>td,
+.dialogBottom>td {
+	padding: 0px;
+}
+
+/* (-) ------------------------------- Modal Widgets ------------------------------- */
+/* (+) ------------------------------- Printing Rules ------------------------------ */
+@media print {
+.noprint {
+	display: none !important;
+}
+/* (-) ------------------------------- Printing Rules ------------------------------ */

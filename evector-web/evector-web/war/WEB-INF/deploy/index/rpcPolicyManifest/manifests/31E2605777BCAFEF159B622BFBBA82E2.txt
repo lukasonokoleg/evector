@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.ParagraphService
+path: 4D14AA56C9FAA8181A32D134923C858C.gwt.rpc

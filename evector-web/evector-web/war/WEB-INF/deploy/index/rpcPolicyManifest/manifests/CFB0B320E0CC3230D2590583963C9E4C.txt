@@ -1,0 +1,2 @@
+serviceClass: lt.jmsys.spark.gwt.application.common.client.login.service.LoginService
+path: AA1AC5AFFFAD0671799E319A34013F3B.gwt.rpc

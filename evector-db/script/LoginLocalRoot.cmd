@@ -1,0 +1,1 @@
+start cmd /c call mysql --port=3307 --host=127.0.0.1 --user=root --password=root  --default-character-set=utf8

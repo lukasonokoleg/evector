@@ -1,0 +1,2 @@
+serviceClass: univ.evector.gwt.client.service.NavaParagraphService
+path: 26826D8E29AAEB9E99E78EE88D62D115.gwt.rpc

@@ -1,0 +1,70 @@
+<%@ page session="false" contentType="text/html; charset=UTF-8" %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--[if lte IE 8]> <html class="ie8"> <![endif]-->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--[if (!IE) | (gt IE 8) ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+
+<head>
+	<link rel="shortcut icon" href="themes/vvsis/img/vv_favicon.ico" type="image/x-icon" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<%-- String vvsisVersion = eu.itreegroup.spark.application.shared.Version.getNumber(); --%>
+<%
+String userAgent = request.getHeader("User-Agent");
+boolean ie10 = lt.jmsys.spark.gwt.application.common.client.helper.AlcsBrowserHelper.isIe10(userAgent);
+String version =  lt.jmsys.spark.gwt.application.common.client.helper.AlcsBrowserHelper.getUserAgentVersion(userAgent);
+boolean ie11orLater = version != null && version.equals(lt.jmsys.spark.gwt.application.common.client.helper.AlcsBrowserHelper.USER_AGENT_IE_11);
+if(ie10 || ie11orLater){
+  %><meta http-equiv="X-UA-Compatible" content="IE=8"/><%
+}else{
+   %><meta http-equiv="content-type" content="text/html; charset=UTF-8"><%
+}
+%>
+	<meta name="gwt:property" content="locale=lt">
+    
+    <!-- Standart GWT Style -->
+    <link href="themes/standard-gwt/css/standard.css" rel="stylesheet" type="text/css" />
+    <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:500" rel="stylesheet" type="text/css" />
+    <link href="themes/spark-gwt/css/spark-icons.css" rel="stylesheet" type="text/css" />
+    <link href="themes/spark-gwt/css/icons.css" rel="stylesheet" type="text/css" />
+    <!-- Default Styles -->
+    <link href="themes/spark-gwt/css/spark.css" rel="stylesheet" type="text/css" />
+    <link href="themes/spark-gwt/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="themes/spark-gwt/css/theme.css" rel="stylesheet" type="text/css" />
+	<!-- Project styles -->
+    <link href="themes/vvsis/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="themes/vvsis/css/theme.css" rel="stylesheet" type="text/css" />
+    <!-- Module Style -->
+	<link href="themes/login/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="themes/login/css/theme.css" rel="stylesheet" type="text/css" />
+    
+ 	<!-- JavaScript -->
+    <script src="themes/vvsis/js/jquery.js"></script> 
+<!--     <script src="resource.js"></script> -->
+	<title>Evector</title>
+    <script type="text/javascript" language="javascript" src="http://evectordev.eu:8080/evector-web/login/login.nocache.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="pageHeader noprint" id="header"></div>
+	<div class="clear"></div><!-- <div class="spark-loading" id="spark-loading"></div> -->
+	<div class="main">
+    	<div class="pageContainer">
+			<div class="pageContentContainer" id="pageContentContainer"></div>
+    	</div>
+    </div>
+    <div class="pageFooter noprint" id="footer"></div>
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+	<noscript>
+	<div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this
+			application to display correctly.</div>
+	</noscript>
+</div>
+</body>
+</html>
